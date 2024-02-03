@@ -1,5 +1,11 @@
 :root,
-.dark {
+.theme_dark {
  --background-color: #041f31;
  --text-color: #bdebea;
+ --accent-color: rgb(23, 191, 147);
+ --accent-gradient: linear-gradient(
+  90deg,
+  rgba(23, 191, 147, 1) 35%,
+  rgba(0, 206, 255, 1) 100%
+ );
 }

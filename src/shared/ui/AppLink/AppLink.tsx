@@ -7,19 +7,26 @@ interface AppLinkProps extends LinkProps {
  className?: string;
 }
 export const AppLink = (props: AppLinkProps) => {
- const { children, to, className } = props;
+ const { children, to, className, ...otherProps } = props;
  return (
   <StyledAppLink className={className}>
-   <Link to={to}>{children}</Link>
+   <Link {...otherProps} to={to}>
+    {children}
+   </Link>
   </StyledAppLink>
  );
 };
-const StyledAppLink = styled.span`
+export const StyledAppLink = styled.p`
  a {
-  padding: 20px 12px;
+  padding: 12px 20px;
   text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--b-rad-small);
+  transition: var(--transition-delay);
+  color: var(--text-color);
   &:hover {
-   background: var(--accent-colot);
+   transition: var(--transition-delay);
+   background: var(--accent-gradient);
   }
  }
 `;

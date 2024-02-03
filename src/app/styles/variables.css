@@ -1,3 +1,51 @@
 :root {
+ --transition-delay: 0.3s;
+
+ /* color */
+ --error-color: #c05353;
+
+ /*  size */
  --header-height: 100px;
+
+ /* border-radius */
+ --b-rad-small: 6px;
+
+ --font-family-main: "Montserrat", consolas,
+  "Times New Roman", serif;
+ /* font-size */
+ /* s */
+ --font-size-s: 13px;
+ --font-line-s: 20px;
+ --font-s: var(--font-size-s) / var(--font-line-s)
+  var(--font-family-main);
+
+ /* m */
+ --font-size-m: 16px;
+ --font-line-m: 24px;
+ --font-m: var(--font-size-m) / var(--font-line-m)
+  var(--font-family-main);
+
+ /* l */
+ --font-size-l: 20px;
+ --font-line-l: 38px;
+ --font-l: var(--font-size-l) / var(--font-line-l)
+  var(--font-family-main);
+
+ /* xl */
+ --font-size-xl: 24px;
+ --font-line-xl: 32px;
+ --font-xl: var(--font-size-xl) / var(--font-line-xl)
+  var(--font-family-main);
+
+ /* xxl */
+ --font-size-xxl: 32px;
+ --font-line-xxl: 40px;
+ --font-xxl: var(--font-size-xxl) / var(--font-line-xxl)
+  var(--font-family-main);
+
+ /* xxxl */
+ --font-size-xxxl: 72px;
+ --font-line-xxxl: 80px;
+ --font-xxxl: var(--font-size-xxxl) / var(--font-line-xxxl)
+  var(--font-family-main);
 }

@@ -4,8 +4,22 @@ export const GlobalStyles = createGlobalStyle`
  *,::before,::after {
   margin: 0 auto;padding: 0;box-sizing:border-box
 }
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
   body {
-  background:var(--background-color)
+  background:var(--background-color);
+  color:var(--text-color);
+  font:var(--font-m);
   }
-  color:var(--text-color)
+  
 `;
