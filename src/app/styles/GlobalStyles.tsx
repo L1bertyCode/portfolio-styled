@@ -9,6 +9,7 @@ input,
 button,
 textarea,
 select {
+  padding: 0;
   margin: 0;
   font: inherit;
   color: inherit;
@@ -16,6 +17,7 @@ select {
   font-size: inherit;
   font-style: inherit;
 }
+
   body {
   background:var(--background-color);
   color:var(--text-color);

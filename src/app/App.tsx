@@ -4,6 +4,7 @@ import { Navbar } from "../widgets/Navbar";
 import { MainLayout } from "../shared/layouts/MainLayout";
 import { AppRouter } from "./providers/router";
 import { useState } from "react";
+import { Footer } from "../widgets/Footer";
 export enum Theme {
  DARK = "theme_dark",
  LIGHT = "theme_light",
@@ -15,6 +16,7 @@ function App() {
    <MainLayout
     header={<Navbar />}
     content={<AppRouter />}
+    footer={<Footer />}
    />
   </div>
  );

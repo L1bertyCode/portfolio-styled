@@ -16,7 +16,7 @@ export const AppLink = (props: AppLinkProps) => {
   </StyledAppLink>
  );
 };
-export const StyledAppLink = styled.p`
+const StyledAppLink = styled.p`
  a {
   padding: 12px 20px;
   text-decoration: none;
