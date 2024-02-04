@@ -48,8 +48,11 @@ export const ProjectsList = memo(
    <>
     <StyledProjectsList className={`${className}`}>
      <div className="projectList">
-      {projectList.map((projectListItem) => (
-       <Project project={projectListItem} />
+      {projectList.map((projectListItem, i) => (
+       <Project
+        key={projectListItem.title + i}
+        project={projectListItem}
+       />
       ))}
      </div>
      <Button className="btn" variant="filled">

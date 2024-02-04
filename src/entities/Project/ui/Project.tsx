@@ -33,8 +33,12 @@ export const Project = memo((props: ProjectProps) => {
     <Text className="title" text={project?.title} />
     <div className="skillsList">
      {project?.skills &&
-      project?.skills.map((skill) => (
-       <Text className="skill" text={skill} />
+      project?.skills.map((skill, i) => (
+       <Text
+        key={skill + i}
+        className="skill"
+        text={skill}
+       />
       ))}
     </div>
     <Text
@@ -81,7 +85,7 @@ const StyledProject = styled.div<ProjectProps>`
   margin-right: 12px;
   background: var(--accent-gradient);
   border-radius: var(--b-rad-small);
-  color:var(--card-color);
+  color: var(--card-color);
   &:last-child {
    margin-right: 0;
   }

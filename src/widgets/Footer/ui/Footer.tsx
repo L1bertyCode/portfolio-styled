@@ -2,6 +2,7 @@ import { memo } from "react";
 import { Text } from "../../../shared/ui/Text/Text";
 import styled from "styled-components";
 import { AppLink } from "../../../shared/ui/AppLink/AppLink";
+import { SocialItem } from "./SocialItem";
 
 interface FooterProps {
  className?: string;
@@ -13,7 +14,11 @@ export const Footer = memo((props: FooterProps) => {
 
  return (
   <StyledFooter className={className}>
-   <div className="social"></div>
+   <div className="socialList">
+    <SocialItem text={"GMAIL"} />
+    <SocialItem text={"LINKEDIN"} />
+    <SocialItem text={"githun"} />
+   </div>
    <nav>
     <AppLink className={"link"} to="/projects">
      Projects
@@ -27,6 +32,17 @@ export const Footer = memo((props: FooterProps) => {
  );
 });
 const StyledFooter = styled.footer<FooterProps>`
+ width: 320px;
+ padding: 100px 0;
  display: flex;
  flex-direction: column;
+ .socialList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+ }
+ nav {
+  margin-bottom: 32px;
+ }
 `;
