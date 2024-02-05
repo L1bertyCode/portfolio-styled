@@ -6,7 +6,7 @@ interface TextProps {
  text?: string;
  title?: string;
  size?: TextSize;
- color?: TextColor;
+ colorType?: TextColor;
 }
 // type HeaderTagType =
 //  | "h1"
