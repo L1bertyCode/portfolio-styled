@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
-import { Link, LinkProps } from "react-router-dom";
+import {
+ Link,
+ LinkProps,
+ useLocation,
+} from "react-router-dom";
 import styled from "styled-components";
 interface AppLinkProps extends LinkProps {
  children: ReactNode;
@@ -8,9 +12,20 @@ interface AppLinkProps extends LinkProps {
 }
 export const AppLink = (props: AppLinkProps) => {
  const { children, to, className, ...otherProps } = props;
+ const location = useLocation();
+ const isActive = location.pathname === to;
+
  return (
-  <StyledAppLink className={className}>
-   <Link {...otherProps} to={to}>
+  <StyledAppLink
+   className={`${className} ${
+    isActive ? "isActive" : undefined
+   }`}
+  >
+   <Link
+    {...otherProps}
+    to={to}
+    className={` ${isActive ? "isActive" : undefined}`}
+   >
     {children}
    </Link>
   </StyledAppLink>
@@ -28,5 +43,9 @@ const StyledAppLink = styled.p`
    transition: var(--transition-delay);
    background: var(--accent-gradient);
   }
+ }
+ .isActive {
+  transition: var(--transition-delay);
+  background: var(--accent-gradient);
  }
 `;

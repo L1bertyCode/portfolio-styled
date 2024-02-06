@@ -12,13 +12,9 @@ export const Banner = memo((props: BannerProps) => {
  return (
   <StyledBanner className={className}>
    <div style={{ width: "50%", marginLeft: "0" }}>
-    <Text
-     text="Web developer"
-    />
-    <Text text="John Doe" size="xxxl" />
-    <Text
-     text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt."
-    />
+    <Text text="Web developer" />
+    <Text text="V I" size="l" />
+    <Text text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt." />
    </div>
    <Button variant="filled">Contact Me</Button>
   </StyledBanner>

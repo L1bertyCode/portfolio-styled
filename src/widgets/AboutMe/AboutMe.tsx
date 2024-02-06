@@ -15,7 +15,7 @@ export const AboutMe = (props: AboutMeProps) => {
   </StyledAboutMe>
  );
 };
-const StyledAboutMe = styled.div`
+const StyledAboutMe = styled.section`
  .text {
   padding-left: 20px;
   position: relative;

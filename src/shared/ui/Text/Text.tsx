@@ -33,7 +33,7 @@ export const Text = (props: TextProps) => {
 };
 const StyledText = styled.p<TextProps>`
  ${(props) => {
-  switch (props.color) {
+  switch (props.colorType) {
    case "error":
     return css<TextProps>`
      color: var(--error-color);
@@ -49,6 +49,14 @@ const StyledText = styled.p<TextProps>`
    case "xxxl":
     return css<TextProps>`
      font: var(--font-xxxl);
+    `;
+   case "l":
+    return css<TextProps>`
+     font: var(--font-l);
+    `;
+   case "xl":
+    return css<TextProps>`
+     font: var(--font-xl);
     `;
    default:
     return css<TextProps>`
