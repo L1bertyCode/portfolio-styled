@@ -16,14 +16,15 @@ export const MainLayout = memo((props: MainLayoutProps) => {
 
  return (
   <MainLayoutStyled className={className}>
-   <div>{header}</div>
-   <div>{content}</div>
-   {footer && <div>{footer}</div>}
+   <>{header}</>
+   <>{content}</>
+   {footer && <>{footer}</>}
   </MainLayoutStyled>
  );
 });
 export const MainLayoutStyled = styled.div`
  margin: 0 auto;
  max-width: 1200px;
- padding: 0 15px;
+ padding: 0 30px;
+ border: 1px solid var(--error-color);
 `;

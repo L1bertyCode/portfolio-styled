@@ -14,7 +14,7 @@ export const AppRouter = memo((props: AppRouterProps) => {
    <Route
     path="/contacts"
     element={<ContactsPage />}
-   />{" "}
+   />
    <Route path="/projects" element={<ProjectsPage />} />
   </Routes>
  );

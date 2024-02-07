@@ -1,7 +1,7 @@
-import React from "react";
+import { Page } from "../../../layouts/Page/Page";
 
 type Props = {};
 
 export const ContactsPage = (props: Props) => {
- return <div>ContactsPage</div>;
+ return <Page>ContactsPage</Page>;
 };

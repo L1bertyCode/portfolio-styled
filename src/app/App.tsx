@@ -1,10 +1,11 @@
 // import styled from "styled-components";
 import "./styles/index.css";
-import { Navbar } from "../widgets/Navbar";
+
 import { MainLayout } from "../shared/layouts/MainLayout";
 import { AppRouter } from "./providers/router";
 import { useState } from "react";
 import { Footer } from "../widgets/Footer";
+import { Header } from "../widgets/Header";
 export enum Theme {
  DARK = "theme_dark",
  LIGHT = "theme_light",
@@ -14,7 +15,7 @@ function App() {
  return (
   <div className={`App ${theme} theme_dark`}>
    <MainLayout
-    header={<Navbar />}
+    header={<Header />}
     content={<AppRouter />}
     footer={<Footer />}
    />

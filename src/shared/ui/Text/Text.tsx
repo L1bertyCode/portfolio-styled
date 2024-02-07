@@ -25,26 +25,23 @@ interface TextProps {
 //  xxxl: "h1",
 // };
 export const Text = (props: TextProps) => {
- const { text, className } = props;
+ const { text, colorType, className } = props;
 
  return (
-  <StyledText className={className}>{text}</StyledText>
+  <StyledText
+   className={`${className} ${
+    colorType === "error" ? "error" : null
+   }`}
+  >
+   {text}
+  </StyledText>
  );
 };
 const StyledText = styled.p<TextProps>`
- ${(props) => {
-  switch (props.colorType) {
-   case "error":
-    return css<TextProps>`
-     color: var(--error-color);
-    `;
-   default:
-    return css<TextProps>`
-     color: var(--text-color);
-    `;
-  }
- }}
- ${(props) => {
+ .error {
+  color: var(--error-color);
+ }
+ ${(props: TextProps) => {
   switch (props.size) {
    case "xxxl":
     return css<TextProps>`
@@ -63,5 +60,5 @@ const StyledText = styled.p<TextProps>`
      font: var(--font-m);
     `;
   }
- }}
+ }};
 `;

@@ -3,6 +3,7 @@ import { Text } from "../../../shared/ui/Text/Text";
 import styled from "styled-components";
 import { AppLink } from "../../../shared/ui/AppLink/AppLink";
 import { SocialItem } from "./SocialItem";
+import { Navbar } from "../../Navbar";
 
 interface FooterProps {
  className?: string;
@@ -19,23 +20,18 @@ export const Footer = memo((props: FooterProps) => {
     <SocialItem text={"LINKEDIN"} />
     <SocialItem text={"githun"} />
    </div>
-   <nav>
-    <AppLink className={"link"} to="/projects">
-     Projects
-    </AppLink>
-    <AppLink className={"link"} to="/contacts">
-     Contacts
-    </AppLink>
-   </nav>
+   <Navbar />
    <Text text={`WEB DEVELOPER ${fullYear}`} />
   </StyledFooter>
  );
 });
 const StyledFooter = styled.footer<FooterProps>`
  width: 320px;
- padding: 100px 0;
+ height: var(--footer-height);
  display: flex;
  flex-direction: column;
+ align-items: center;
+ justify-content: center;
  .socialList {
   width: 100%;
   display: flex;
@@ -44,5 +40,6 @@ const StyledFooter = styled.footer<FooterProps>`
  }
  nav {
   margin-bottom: 32px;
+  display: flex;
  }
 `;
