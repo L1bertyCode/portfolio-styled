@@ -25,12 +25,11 @@ export const Navbar = memo((props: NavbarProps) => {
  );
 });
 const StyledNavbar = styled.nav`
- margin-right: 0;
  display: flex;
  align-content: center;
  justify-content: end;
 
  a {
-  margin-right: 10px;
+  margin-right: 20px;
  }
 `;

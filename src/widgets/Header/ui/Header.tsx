@@ -1,8 +1,8 @@
-import s from "./Header.module.scss";
 import { Navbar } from "../../Navbar";
 import styled from "styled-components";
 import { Logo } from "../../../shared/ui/Logo/Logo";
 import { Icon } from "../../../shared/ui/Icon/Icon";
+import { Button } from "../../../shared/ui/Button/Button";
 
 interface HeaderProps {
  className?: string;
@@ -16,6 +16,7 @@ export const Header = (props: HeaderProps) => {
     <Icon iconId="arrowScroll" />
    </Logo>
    <Navbar />
+   <Button variant="filled">Contact Me</Button>
   </StyledHeader>
  );
 };

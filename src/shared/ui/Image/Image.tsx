@@ -9,13 +9,22 @@ interface ImageProps
 }
 
 export const Image = memo((props: ImageProps) => {
- const { src, alt = "image", className } = props;
+ const {
+  src,
+  alt = "image",
+  className,
+  ...otherProps
+ } = props;
 
  return (
-  <StyledImage src={src} alt={alt} className={className} />
+  <StyledImage
+   {...otherProps}
+   src={src}
+   alt={alt}
+   className={className}
+  />
  );
 });
 const StyledImage = styled.img`
  width: 100%;
-
 `;

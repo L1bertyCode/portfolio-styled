@@ -1,9 +1,18 @@
 :root {
+ /* indent */
+ --indent-s: 8px;
+ --indent-m: 12px;
+ --indent-l: 16px;
+ --indent-xl: 20px;
+ --indent-xxl: 24px;
+ --indent-xxxl: 40px;
+
  --transition-delay: 0.3s;
 
  /* color */
  --error-color: #c05353;
  --card-color: #222525;
+
  /*  size */
  --header-height: 100px;
  --footer-height: 400px;
@@ -13,6 +22,7 @@
 
  --font-family-main: "Montserrat", consolas,
   "Times New Roman", serif;
+  
  /* font-size */
  /* s */
  --font-size-s: 13px;

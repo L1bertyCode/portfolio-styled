@@ -31,19 +31,44 @@ export const AppLink = (props: AppLinkProps) => {
 };
 const StyledAppLink = styled.p`
  a {
-  padding: 12px 20px;
+  position: relative;
+  padding: 12px 6px;
   text-decoration: none;
-  border: 1px solid transparent;
+  border-bottom: 11px solid transparent;
   border-radius: var(--b-rad-small);
   transition: var(--transition-delay);
   color: var(--text-color);
+  &:after {
+   transition: var(--transition-delay);
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 11px;
+   background: transparent;
+   bottom: -4px;
+   left: 0;
+   border-radius: var(--b-rad-small);
+  }
   &:hover {
    transition: var(--transition-delay);
-   background: var(--accent-gradient);
+   &:after {
+    transition: var(--transition-delay);
+    background: var(--accent-gradient);
+   }
   }
- }
- .isActive {
-  transition: var(--transition-delay);
-  background: var(--accent-gradient);
+  &.isActive {
+   transition: var(--transition-delay);
+   &:after {
+    transition: var(--transition-delay);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 11px;
+    background: var(--accent-gradient);
+    bottom: -4px;
+    left: 0;
+    border-radius: var(--b-rad-small);
+   }
+  }
  }
 `;

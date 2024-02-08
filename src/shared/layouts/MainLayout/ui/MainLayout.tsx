@@ -26,5 +26,4 @@ export const MainLayoutStyled = styled.div`
  margin: 0 auto;
  max-width: 1200px;
  padding: 0 30px;
- border: 1px solid var(--error-color);
 `;
