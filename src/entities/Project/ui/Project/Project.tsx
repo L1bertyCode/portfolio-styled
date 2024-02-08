@@ -1,7 +1,7 @@
 import { memo } from "react";
 import styled from "styled-components";
-import { ProjectSchema } from "../model/types/project";
-import { Text } from "../../../shared/ui/Text/Text";
+import { ProjectSchema } from "../../model/types/project";
+import { Text } from "../../../../shared/ui/Text/Text";
 
 interface ProjectProps {
  className?: string;
@@ -22,11 +22,6 @@ export const Project = memo((props: ProjectProps) => {
      alt={project?.title}
     />
    ) : (
-    // <img
-    //  className="img"
-    //  src={"../../../shared/assets/images/stub.webp"}
-    //  alt={"default_img"}
-    // />
     <div className={"imgBlock"}></div>
    )}
    <div className="content">
@@ -50,28 +45,35 @@ export const Project = memo((props: ProjectProps) => {
  );
 });
 const StyledProject = styled.div<ProjectProps>`
- width: 49%;
+ width: 48%;
  height: 638px;
  background: var(--card-color);
  border-radius: var(--b-rad-small);
  overflow: hidden;
 
  .img {
+  width: 100%;
   height: 388px;
  }
  .imgBlock {
+  width: 100%;
+
   height: 388px;
   background: var(--accent-gradient);
  }
  .content {
+  width: 100%;
+
   padding: 12px;
  }
  .title {
+  width: 100%;
+
   margin-bottom: 12px;
  }
 
  .skillsList {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: start;

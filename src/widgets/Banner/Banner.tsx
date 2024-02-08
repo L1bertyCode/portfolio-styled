@@ -30,11 +30,13 @@ export const Banner = memo((props: BannerProps) => {
   </StyledBanner>
  );
 });
-const StyledBanner = styled.div<BannerProps>`  
+const StyledBanner = styled.div<BannerProps>`
  display: flex;
  justify-content: space-between;
  align-items: center;
- padding-bottom: 100px;
+ margin-bottom: calc(
+  var(--indent-xxxl) + var(--indent-xxxl)
+ );
  .info {
   width: 50%;
  }
@@ -45,6 +47,6 @@ const StyledBanner = styled.div<BannerProps>`
   margin-top: var(--indent-xl);
  }
  .img {
-  width: 50%;
+  width: 40%;
  }
 `;

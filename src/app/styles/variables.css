@@ -22,7 +22,7 @@
 
  --font-family-main: "Montserrat", consolas,
   "Times New Roman", serif;
-  
+
  /* font-size */
  /* s */
  --font-size-s: 13px;
@@ -55,8 +55,8 @@
   var(--font-family-main);
 
  /* xxxl */
- --font-size-xxxl: 72px;
- --font-line-xxxl: 80px;
+ --font-size-xxxl: 56px;
+ --font-line-xxxl: 64px;
  --font-xxxl: var(--font-size-xxxl) / var(--font-line-xxxl)
   var(--font-family-main);
 }

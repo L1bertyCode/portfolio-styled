@@ -8,7 +8,11 @@ export const AboutMe = (props: AboutMeProps) => {
  const { className } = props;
  return (
   <StyledAboutMe className={className}>
-   <Title className="title" title="About me" />
+   <Title
+    className="title"
+    title="About me"
+    TitleTag="h2"
+   />
    <Text
     className="text"
     text="The long barrow was built on land previously inhabited in the Mesolithic period. It consisted of a sub-rectangular earthen tumulus, estimated to have been 15 metres (50 feet) in length, with a chamber built from sarsen megaliths on its eastern end. Both inhumed and cremated human remains were placed within this chamber during the Neolithic period, representing at least nine or ten individuals."
@@ -17,9 +21,11 @@ export const AboutMe = (props: AboutMeProps) => {
  );
 };
 const StyledAboutMe = styled.section`
- margin-top: var(--indent-xxxl);
  width: 65%;
  margin-left: 0;
+ margin-bottom: calc(
+  var(--indent-xxxl) + var(--indent-xxxl)
+ );
  .title {
   margin-bottom: var(--indent-xl);
  }

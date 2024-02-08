@@ -12,7 +12,7 @@ export const ContactMeForm = memo(
   const { className } = props;
   return (
    <ContactMeFormStyled className={className}>
-    <Input label="Name" error={"error"} className="input" />
+    <Input label="Name" className="input" />
     <Input label="Email" className="input" />
     <Input label="Message" className="input message" />
     <Button className="btn" variant="filled">

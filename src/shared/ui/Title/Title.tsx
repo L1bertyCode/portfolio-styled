@@ -5,7 +5,7 @@ type TitleTagType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 type TitleColor = "primary" | "accent";
 interface TitleProps {
  title: string;
- TitleTag?: TitleTagType;
+ TitleTag: TitleTagType;
  colorType?: TitleColor;
  className?: string;
 }
@@ -13,7 +13,7 @@ interface TitleProps {
 const DefaultTitle = memo((props: TitleProps) => {
  const {
   title,
-  TitleTag = "h3",
+  TitleTag = "h2",
   colorType = "primary",
   className,
   ...otherPorps
