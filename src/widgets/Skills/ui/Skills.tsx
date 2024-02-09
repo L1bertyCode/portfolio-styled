@@ -4,6 +4,7 @@ import {
  SkillSchema,
  SkillsList,
 } from "../../../entities/Skill";
+import { Icon } from "../../../shared/ui/Icon/Icon";
 const defaultSkillsList: SkillSchema[] = [
  {
   iconId: "docker",
@@ -67,6 +68,7 @@ export const Skills = memo((props: SkillsProps) => {
  return (
   <section className={className}>
    <SkillsList skillsList={defaultSkillsList} />
+   <Icon iconId="next" viewBox="0 0 20 20" />
   </section>
  );
 });

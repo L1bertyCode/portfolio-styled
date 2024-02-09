@@ -1,6 +1,7 @@
-import { memo } from "react";
+import { SVGProps, memo } from "react";
 import iconsSprite from "../../assets/icons/iconsSprite.svg";
-interface IconProps {
+import styled from "styled-components";
+interface IconProps extends SVGProps<SVGSVGElement> {
  iconId: string;
  width?: string;
  height?: string;
@@ -12,19 +13,23 @@ export const Icon = memo((props: IconProps) => {
  const {
   width = "50",
   height = "50",
-  viewBox = "0 0 50 50",
+  viewBox = "0 0 120 120",
   iconId,
   className,
  } = props;
  return (
-  <svg
+  <StyledSvg
    width={width}
    height={height}
    viewBox={viewBox}
    fill="none"
    className={className}
   >
-   <use xlinkHref={`${iconsSprite}#${iconId}`} />
-  </svg>
+   <use
+    fill="none"
+    xlinkHref={`${iconsSprite}#${iconId}`}
+   />
+  </StyledSvg>
  );
 });
+const StyledSvg = styled.svg``;
