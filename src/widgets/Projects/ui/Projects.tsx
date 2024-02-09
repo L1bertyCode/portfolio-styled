@@ -5,7 +5,7 @@ import {
  ProjectSchema,
  ProjectsList,
 } from "../../../entities/Project";
-import { Button } from "../../../shared/ui/Button/Button";
+
 import { Title } from "../../../shared/ui/Title/Title";
 
 interface ProjectsProps {
@@ -15,6 +15,7 @@ interface ProjectsProps {
 }
 const defaultList: ProjectSchema[] = [
  {
+  id: "1",
   title: "TITLE PROJECT",
   skills: [
    "Javascript",
@@ -29,6 +30,7 @@ const defaultList: ProjectSchema[] = [
    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
  },
  {
+  id: "2",
   title: "Instagramm",
   skills: [
    "Javascript",
@@ -43,6 +45,7 @@ const defaultList: ProjectSchema[] = [
    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
  },
  {
+  id: "3",
   title: "TITLE PROJECT",
   skills: [
    "Javascript",
@@ -57,6 +60,7 @@ const defaultList: ProjectSchema[] = [
    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
  },
  {
+  id: "4",
   title: "Instagramm",
   skills: [
    "Javascript",

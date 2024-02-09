@@ -1,6 +1,6 @@
 import { memo } from "react";
 import {
- Project,
+  ProjectItem,
  ProjectSchema,
 } from "../../../../entities/Project";
 import styled from "styled-components";
@@ -24,7 +24,7 @@ export const ProjectsList = memo(
     <StyledProjectsList className={`${className}`}>
      <div className="projectList">
       {projectList.map((projectListItem, i) => (
-       <Project
+       <ProjectItem
         key={projectListItem.title + i}
         project={projectListItem}
        />

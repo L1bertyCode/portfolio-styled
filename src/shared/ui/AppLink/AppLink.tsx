@@ -19,11 +19,7 @@ export const AppLink = (props: AppLinkProps) => {
   <StyledAppLink
    className={`${className} ${isActive ? "isActive" : " "}`}
   >
-   <Link
-    {...otherProps}
-    to={to}
-    className={` ${isActive ? "isActive" : " "}`}
-   >
+   <Link {...otherProps} to={to}>
     {children}
    </Link>
   </StyledAppLink>

@@ -1,5 +1,5 @@
 export { ProjectsList } from "./ui/ProjectsList/ProjectsList";
 
-export { Project } from "./ui/Project/Project";
+export { ProjectItem } from "./ui/Project/ProjectItem";
 
 export type { ProjectSchema } from "./model/types/project";
