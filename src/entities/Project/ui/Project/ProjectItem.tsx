@@ -58,7 +58,7 @@ export const ProjectItem = memo(
  }
 );
 const StyledProjectItem = styled.div<ProjectItemProps>`
- max-width: 48%;
+ max-width: 48.5%;
  height: 638px;
  background: var(--card-color);
  border-radius: var(--b-rad-small);

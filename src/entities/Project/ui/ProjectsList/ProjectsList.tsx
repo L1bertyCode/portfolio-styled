@@ -1,6 +1,6 @@
 import { memo } from "react";
 import {
-  ProjectItem,
+ ProjectItem,
  ProjectSchema,
 } from "../../../../entities/Project";
 import styled from "styled-components";
@@ -30,9 +30,6 @@ export const ProjectsList = memo(
        />
       ))}
      </div>
-     <Button className="btn" variant="filled">
-      SEE ALL PROJECTS
-     </Button>
     </StyledProjectsList>
    </>
   );
@@ -40,10 +37,6 @@ export const ProjectsList = memo(
 );
 const StyledProjectsList = styled.section`
  width: 100%;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
  .projectList {
   width: 100%;
   display: flex;
@@ -52,8 +45,5 @@ const StyledProjectsList = styled.section`
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 32px;
- }
- .btn {
-  max-width: 300px;
  }
 `;
