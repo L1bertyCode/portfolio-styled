@@ -23,9 +23,7 @@ export const AboutMe = (props: AboutMeProps) => {
 const StyledAboutMe = styled.section`
  width: 65%;
  margin-left: 0;
- margin-bottom: calc(
-  var(--indent-xxxl) + var(--indent-xxxl)
- );
+
  .title {
   margin-bottom: var(--indent-xl);
  }

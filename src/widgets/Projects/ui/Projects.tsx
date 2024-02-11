@@ -48,17 +48,29 @@ export const Projects = memo((props: ProjectsProps) => {
  const { className } = props;
  return (
   <StyledProjects className={`${className}`}>
-   <Title title="Projects" TitleTag="h2" />
-   <ProjectsList projectList={defaultList} />
-   <Button className="btn" variant="filled">
-    SEE ALL PROJECTS
-   </Button>
+   <Title
+    className="title"
+    title="Projects"
+    TitleTag="h2"
+   />
+   <div className="content">
+    <ProjectsList projectList={defaultList} />
+    <Button className="btn" variant="filled">
+     SEE ALL PROJECTS
+    </Button>
+   </div>
   </StyledProjects>
  );
 });
 const StyledProjects = styled.section`
  width: 100%;
- display: flex;
- flex-direction: column;
- align-items: center;
+ .content {
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+ .title {
+  margin-bottom: var(--indent-xxxl);
+ }
 `;

@@ -1,0 +1,21 @@
+@font-face {
+ font-family: "Montserrat";
+ src: local("Montserrat"),
+  url("../../shared/assets/fonts/static/Montserrat-Regular.ttf")
+   format("ttf");
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Montserrat-SemiBold";
+ src: local("Montserrat-SemiBold"),
+  url("../../shared/assets/fonts/static/Montserrat-SemiBold.ttf")
+   format("ttf");
+ font-weight: 600;
+}
+@font-face {
+ font-family: "Montserrat-Bold";
+ src: local("Montserrat-Bold"),
+  url("../../shared/assets/fonts/static/Montserrat-Bold.ttf")
+   format("ttf");
+ font-weight: 700;
+}

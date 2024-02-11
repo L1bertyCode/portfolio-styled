@@ -31,7 +31,7 @@ export const ProjectItem = memo(
      <AppLink
       variant="filled"
       className={"link"}
-      to={"/project" + project.id}
+      to={"/project/" + project.id}
      >
       Show poject
      </AppLink>
@@ -69,7 +69,7 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
   width: 100%;
   height: 388px;
   border-radius: 12px 12px 0 0;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color-inverted);
   position: relative;
   transition-delay: var(--transition-delay);
   background: var(--background-color);

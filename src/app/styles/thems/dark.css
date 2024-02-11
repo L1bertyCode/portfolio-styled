@@ -1,8 +1,10 @@
 :root,
 .theme_dark {
  --background-color: #041f31;
+ --background-color-inverted: #fafafa;
  --text-color: #bdebea;
- --accent-color: rgb(23, 191, 147);
+ --accent-color: #17bf93;
+ --accent-color-inverted: #5222d0;
  --accent-gradient: linear-gradient(
   90deg,
   rgba(23, 191, 147, 1) 35%,

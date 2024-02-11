@@ -13,7 +13,7 @@ export const Header = (props: HeaderProps) => {
  return (
   <StyledHeader className={className}>
    <Logo className="logo">
-    <Icon iconId="arrowScroll" />
+    <Icon iconId="programmer" viewBox="0 0 64 64" />
    </Logo>
    <Navbar />
    <Button variant="filled">Contact Me</Button>

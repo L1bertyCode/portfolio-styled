@@ -14,7 +14,6 @@ const DefaultTitle = memo((props: TitleProps) => {
  const {
   title,
   TitleTag = "h2",
-  colorType = "primary",
   className,
   ...otherPorps
  } = props;
@@ -30,26 +29,32 @@ export const Title = styled(DefaultTitle)`
    case "h5":
     return css<TitleProps>`
      font: var(--font-m);
+     font-weight: 600;
     `;
    case "h4":
     return css<TitleProps>`
      font: var(--font-l);
+     font-weight: 600;
     `;
    case "h3":
     return css<TitleProps>`
      font: var(--font-xl);
+     font-weight: 600;
     `;
    case "h2":
     return css<TitleProps>`
      font: var(--font-xxxl);
+     font-weight: 600;
     `;
    case "h1":
     return css<TitleProps>`
      font: var(--font-xxl);
+     font-weight: 700;
     `;
    default:
     return css<TitleProps>`
      font: var(--font-l);
+     font-weight: 600;
     `;
   }
  }};

@@ -34,9 +34,7 @@ const StyledBanner = styled.div<BannerProps>`
  display: flex;
  justify-content: space-between;
  align-items: center;
- margin-bottom: calc(
-  var(--indent-xxxl) + var(--indent-xxxl)
- );
+
  .info {
   width: 50%;
  }

@@ -25,5 +25,6 @@ export const MainLayout = memo((props: MainLayoutProps) => {
 export const MainLayoutStyled = styled.div`
  margin: 0 auto;
  max-width: 1200px;
+ width: 100%;
  padding: 0 30px;
 `;
