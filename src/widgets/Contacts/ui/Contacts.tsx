@@ -1,6 +1,8 @@
 import { memo } from "react";
-import { Text } from "../../../shared/ui/Text/Text";
+
 import { ContactMeForm } from "../../../feature/contactMeForm";
+import { Title } from "../../../shared/ui/Title/Title";
+import styled from "styled-components";
 
 interface ContactsProps {
  className?: string;
@@ -9,9 +11,18 @@ interface ContactsProps {
 export const Contacts = memo((props: ContactsProps) => {
  const { className } = props;
  return (
-  <div className={className}>
-   <Text text={"Contacts"} />
+  <StyledContacts className={className}>
+   <Title
+    className="title"
+    title={"Contacts"}
+    TitleTag="h3"
+   />
    <ContactMeForm />
-  </div>
+  </StyledContacts>
  );
 });
+const StyledContacts = styled.section<ContactsProps>`
+ .title {
+  margin-bottom: var(--indent-xxxl);
+ }
+`;

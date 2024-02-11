@@ -27,6 +27,7 @@ export const Footer = memo((props: FooterProps) => {
 });
 const StyledFooter = styled.footer<FooterProps>`
  width: 320px;
+ margin: 0 auto;
  height: var(--footer-height);
  display: flex;
  flex-direction: column;

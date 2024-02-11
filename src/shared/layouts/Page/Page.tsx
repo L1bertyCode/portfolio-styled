@@ -15,6 +15,7 @@ export const Page = (props: PageProps) => {
 };
 
 const StylePage = styled.main`
+ margin-top: var(--header-height);
  min-height: calc(
   100vh - var(--header-height) - var(--footer-height)
  );

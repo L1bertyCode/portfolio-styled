@@ -7,6 +7,7 @@ interface ButtonProps
  variant?: ButtonVariant;
  className?: string;
  disabled?: boolean;
+ isActive?: boolean;
 }
 
 export const Button = (props: ButtonProps) => {
@@ -24,7 +25,7 @@ const StyledButton = styled.button<ButtonProps>`
  border-radius: var(--b-rad-small);
  cursor: pointer;
  transition: var(--transition-delay);
- 
+
  ${(props) => {
   switch (props.variant) {
    case "filled":
@@ -47,6 +48,16 @@ const StyledButton = styled.button<ButtonProps>`
       transition: var(--transition-delay);
      }
     `;
+  }
+ }}
+ ${(props) => {
+  switch (props.isActive) {
+   case true:
+    return css<ButtonProps>`
+     background: var(--accent-gradient);
+    `;
+   default:
+    return css<ButtonProps>``;
   }
  }}
 `;

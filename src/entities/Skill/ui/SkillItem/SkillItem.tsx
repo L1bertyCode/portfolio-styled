@@ -1,29 +1,31 @@
 import { memo } from "react";
-import { SkillSchema } from "../../model/types/skill";
+import { SkillItemSchema } from "../../model/types/skill";
 import { Icon } from "../../../../shared/ui/Icon/Icon";
 import { Text } from "../../../../shared/ui/Text/Text";
 import styled from "styled-components";
 
-interface SkillProps {
- skill?: SkillSchema;
+interface SkillItemProps {
+ skill?: SkillItemSchema;
  className?: string;
 }
 
-export const Skill = memo((props: SkillProps) => {
+export const SkillItem = memo((props: SkillItemProps) => {
  const { skill, className } = props;
  if (!skill) {
   return null;
  }
  return (
-  <StyledSkill className={className}>
-   <Icon iconId={skill.iconId} />
+  <StyledSkillItem className={className}>
+   <Icon iconId={skill.iconId} viewBox={skill?.viewBox} />
    <Text text={skill.text.toUpperCase()} />
-  </StyledSkill>
+  </StyledSkillItem>
  );
 });
-const StyledSkill = styled.div`
+const StyledSkillItem = styled.div`
  width: 200px;
  display: flex;
+ align-items: center;
  flex-direction: column;
  gap: var(--indent-m);
+ padding: 0 0 var(--indent-xxxl) 0;
 `;

@@ -3,7 +3,8 @@ import { memo } from "react";
 import { Input } from "../../../shared/ui/Input/Input";
 import styled from "styled-components";
 import { Textarea } from "../../../shared/ui/Textarea/Textarea";
-import { AppLink } from "../../../shared/ui/AppLink/AppLink";
+
+import { Button } from "../../../shared/ui/Button/Button";
 
 interface ContactMeFormProps {
  className?: string;
@@ -17,18 +18,15 @@ export const ContactMeForm = memo(
     <Input label="Name" className="field" />
     <Input label="Email" className="field" />
     <Textarea label="Message" className="field" />
-    <AppLink
-     to="/projects"
-     className="btn"
-     variant="filled"
-    >
+    <Button className="btn" variant="filled">
      Submit
-    </AppLink>
+    </Button>
    </ContactMeFormStyled>
   );
  }
 );
 const ContactMeFormStyled = styled.div`
+ margin: 0 auto;
  display: flex;
  flex-direction: column;
  justify-content: center;

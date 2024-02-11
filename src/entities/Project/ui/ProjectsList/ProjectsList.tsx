@@ -4,7 +4,6 @@ import {
  ProjectSchema,
 } from "../../../../entities/Project";
 import styled from "styled-components";
-import { Button } from "../../../../shared/ui/Button/Button";
 
 interface ProjectsListProps {
  className?: string;

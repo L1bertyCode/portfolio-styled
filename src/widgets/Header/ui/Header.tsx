@@ -21,6 +21,14 @@ export const Header = (props: HeaderProps) => {
  );
 };
 const StyledHeader = styled.header`
+ position: fixed;
+ box-sizing: border-box;
+ top: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ max-width: 1200px;
+ padding: 0 30px;
+ z-index: 1000;
  width: 100%;
  display: flex;
  justify-content: space-between;

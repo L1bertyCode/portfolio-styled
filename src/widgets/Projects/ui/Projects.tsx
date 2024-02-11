@@ -8,6 +8,7 @@ import {
 
 import { Title } from "../../../shared/ui/Title/Title";
 import { Button } from "../../../shared/ui/Button/Button";
+import { TabMenu } from "../../../feature/chngeTab";
 
 interface ProjectsProps {
  className?: string;
@@ -51,9 +52,10 @@ export const Projects = memo((props: ProjectsProps) => {
    <Title
     className="title"
     title="Projects"
-    TitleTag="h2"
+    TitleTag="h3"
    />
    <div className="content">
+    <TabMenu className="tabs" />
     <ProjectsList projectList={defaultList} />
     <Button className="btn" variant="filled">
      SEE ALL PROJECTS
@@ -65,12 +67,14 @@ export const Projects = memo((props: ProjectsProps) => {
 const StyledProjects = styled.section`
  width: 100%;
  .content {
-
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
  .title {
   margin-bottom: var(--indent-xxxl);
+ }
+ .tabs {
+  margin-bottom: var(--indent-xxl);
  }
 `;

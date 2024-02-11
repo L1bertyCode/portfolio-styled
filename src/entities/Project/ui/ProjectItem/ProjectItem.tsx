@@ -4,6 +4,7 @@ import { ProjectSchema } from "../../model/types/project";
 import { Text } from "../../../../shared/ui/Text/Text";
 
 import { AppLink } from "../../../../shared/ui/AppLink/AppLink";
+import { Title } from "../../../../shared/ui/Title/Title";
 
 interface ProjectItemProps {
  className?: string;
@@ -37,7 +38,11 @@ export const ProjectItem = memo(
      </AppLink>
     </div>
     <div className="content">
-     <Text className="title" text={project.title} />
+     <Title
+      className="title"
+      title={project.title}
+      TitleTag="h5"
+     />
      <div className="skillsList">
       {project?.skills &&
        project?.skills.map((skill, i) => (
@@ -63,7 +68,6 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
  background: var(--card-color);
  border-radius: var(--b-rad-small);
  overflow: hidden;
- transition-delay: var(--transition-delay);
 
  .imgBlock {
   width: 100%;
@@ -71,7 +75,7 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
   border-radius: 12px 12px 0 0;
   border: 1px solid var(--accent-color-inverted);
   position: relative;
-  transition-delay: var(--transition-delay);
+
   background: var(--background-color);
 
   .img {
@@ -86,18 +90,14 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
    top: 50%;
    left: 50%;
    transform: translate3d(-50%, -50%, 0);
-   transition-delay: var(--transition-delay);
   }
  }
  &:hover {
-  transition-delay: var(--transition-delay);
   .imgBlock {
    background: #00000001;
-   transition-delay: var(--transition-delay);
+
    .link {
-    transition-delay: var(--transition-delay);
     display: block;
-    transition-delay: var(--transition-delay);
    }
   }
  }
@@ -107,22 +107,18 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
  }
  .title {
   width: 100%;
-
   margin-bottom: 12px;
  }
 
  .skillsList {
-  max-width: 100%;
+  width: 100%;
+  margin-left: 0;
   display: flex;
-  align-items: center;
-  justify-content: start;
   overflow-x: hidden;
   margin-bottom: 20px;
  }
  .skill {
-  margin: 0;
   padding: 12px 20px;
-  width: fit-content;
   margin-right: 12px;
   background: var(--accent-gradient);
   border-radius: var(--b-rad-small);

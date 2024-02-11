@@ -1,3 +1,3 @@
 export { SkillsList } from "./ui/SkillsList/SkillsList";
 
-export type { SkillSchema } from "./model/types/skill";
+export type { SkillItemSchema } from "./model/types/skill";

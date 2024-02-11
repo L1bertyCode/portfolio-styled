@@ -1,11 +1,13 @@
 import { memo } from "react";
 
 import {
- SkillSchema,
+ SkillItemSchema,
  SkillsList,
 } from "../../../entities/Skill";
 import { Icon } from "../../../shared/ui/Icon/Icon";
-const defaultSkillsList: SkillSchema[] = [
+import { Title } from "../../../shared/ui/Title/Title";
+import styled from "styled-components";
+const defaultSkillsList: SkillItemSchema[] = [
  {
   iconId: "docker",
   text: "docker",
@@ -17,6 +19,7 @@ const defaultSkillsList: SkillSchema[] = [
  {
   iconId: "git",
   text: "git",
+  viewBox: "0 0 420 420",
  },
  {
   iconId: "jest",
@@ -66,9 +69,19 @@ interface SkillsProps {
 export const Skills = memo((props: SkillsProps) => {
  const { className } = props;
  return (
-  <section className={className}>
+  <StyledSkills className={className}>
+   <Title
+    className="title"
+    title={"Skills"}
+    TitleTag="h3"
+   />
    <SkillsList skillsList={defaultSkillsList} />
    <Icon iconId="next" viewBox="0 0 20 20" />
-  </section>
+  </StyledSkills>
  );
 });
+const StyledSkills = styled.section`
+ .title {
+  margin-bottom: var(--indent-xxxl);
+ }
+`;

@@ -11,7 +11,7 @@ export const AboutMe = (props: AboutMeProps) => {
    <Title
     className="title"
     title="About me"
-    TitleTag="h2"
+    TitleTag="h3"
    />
    <Text
     className="text"

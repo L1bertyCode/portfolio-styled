@@ -20,7 +20,6 @@ export const MainPage = (props: MainPageProps) => {
  );
 };
 const StyledPage = styled(Page)`
- margin-top: 100px;
  .section {
   margin-bottom: 60px;
  }
