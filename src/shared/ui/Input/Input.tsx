@@ -59,7 +59,7 @@ const StyledInput = styled.div`
  .input {
   width: 100%;
   background: none;
-  padding: 10px 20px;
+  padding: 10px 40px 10px 20px;
   border-radius: var(--b-rad-small);
   border: 1px solid var(--text-color);
   outline: none;

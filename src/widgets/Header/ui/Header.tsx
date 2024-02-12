@@ -34,6 +34,8 @@ const StyledHeader = styled.header`
  justify-content: space-between;
  align-items: center;
  height: var(--header-height);
+ background: var(--background-color);
+ opacity: 0.95;
  .logo {
   margin-left: 0;
  }
