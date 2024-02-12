@@ -14,11 +14,15 @@ const DefaultTitle = memo((props: TitleProps) => {
  const {
   title,
   TitleTag = "h2",
+  colorType = "primary",
   className,
   ...otherPorps
  } = props;
  return (
-  <TitleTag {...otherPorps} className={className}>
+  <TitleTag
+   {...otherPorps}
+   className={`${className} ${colorType}`}
+  >
    {title}
   </TitleTag>
  );

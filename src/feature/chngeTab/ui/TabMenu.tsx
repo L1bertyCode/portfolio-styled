@@ -15,8 +15,12 @@ export const TabMenu = memo((props: TabMenuProps) => {
  const { className } = props;
  return (
   <StyledTabMenu className={className}>
-   {array.map((arrayItem) => (
-    <Button className="btn" isActive={arrayItem.isActive}>
+   {array.map((arrayItem, i) => (
+    <Button
+     className="btn"
+     key={i}
+     isActive={arrayItem.isActive}
+    >
      {arrayItem.name}
     </Button>
    ))}

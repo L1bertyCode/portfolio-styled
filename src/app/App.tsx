@@ -1,4 +1,5 @@
 // import styled from "styled-components";
+
 import "./styles/index.css";
 
 import { MainLayout } from "../shared/layouts/MainLayout";

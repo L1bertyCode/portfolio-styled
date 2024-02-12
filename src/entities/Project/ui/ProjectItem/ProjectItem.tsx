@@ -5,7 +5,8 @@ import { Text } from "../../../../shared/ui/Text/Text";
 
 import { AppLink } from "../../../../shared/ui/AppLink/AppLink";
 import { Title } from "../../../../shared/ui/Title/Title";
-
+import stubImg from "../../../../shared/assets/images/stub.webp";
+import { Image } from "../../../../shared/ui/Image/Image";
 interface ProjectItemProps {
  className?: string;
  project?: ProjectSchema;
@@ -22,13 +23,11 @@ export const ProjectItem = memo(
   return (
    <StyledProjectItem className={className}>
     <div className={"imgBlock"}>
-     {project.imgUrl && (
-      <img
-       className="img"
-       src={project.imgUrl}
-       alt={project.title}
-      />
-     )}
+     <Image
+      className="img"
+      src={project.imgUrl || stubImg}
+      alt={project.title}
+     />
      <AppLink
       variant="filled"
       className={"link"}
@@ -39,7 +38,7 @@ export const ProjectItem = memo(
     </div>
     <div className="content">
      <Title
-      className="title"
+      className="porject_title"
       title={project.title}
       TitleTag="h5"
      />
@@ -70,18 +69,28 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
  overflow: hidden;
 
  .imgBlock {
+  position: relative;
   width: 100%;
   height: 388px;
   border-radius: 12px 12px 0 0;
-  border: 1px solid var(--accent-color-inverted);
+
   position: relative;
 
-  background: var(--background-color);
-
+  /* background: var(--background-color); */
+  &:before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   z-index: 1;
+  }
   .img {
    border-radius: 12px 12px 0 0;
    width: 100%;
    height: 388px;
+   object-fit: cover;
   }
 
   .link {
@@ -89,12 +98,15 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
    position: absolute;
    top: 50%;
    left: 50%;
+   z-index: 2;
    transform: translate3d(-50%, -50%, 0);
   }
  }
  &:hover {
   .imgBlock {
-   background: #00000001;
+   &:before {
+    background: #00000099;
+   }
 
    .link {
     display: block;
@@ -105,7 +117,7 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
   width: 100%;
   padding: 12px;
  }
- .title {
+ .porject_title {
   width: 100%;
   margin-bottom: 12px;
  }
@@ -125,6 +137,10 @@ const StyledProjectItem = styled.div<ProjectItemProps>`
   color: var(--card-color);
   &:last-child {
    margin-right: 0;
+  }
+  .description {
+   overflow: hidden;
+   text-overflow: ellipsis;
   }
  }
 `;
