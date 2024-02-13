@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { ContactMeForm } from "../../../../feature/contactMeForm";
-
-import { Page } from "../../../layouts/Page/Page";
+import { ContactMeForm } from "../../../feature/contactMeForm";
+import { Page } from "../../../shared/layouts/Page/Page";
 
 type ContactsPageProps = {};
 
-export const ContactsPage = (props: ContactsPageProps) => {
+const ContactsPage = (props: ContactsPageProps) => {
  return (
   <StyledContactsPage>
    <ContactMeForm />
@@ -17,3 +16,4 @@ const StyledContactsPage = styled(Page)`
  align-items: center;
  justify-content: center;
 `;
+export default ContactsPage;

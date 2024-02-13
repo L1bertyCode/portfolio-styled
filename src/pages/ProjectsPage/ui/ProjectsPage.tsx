@@ -1,9 +1,8 @@
-import { Page } from "../../../layouts/Page/Page";
-
 import {
  ProjectSchema,
  ProjectsList,
-} from "../../../../entities/Project";
+} from "../../../entities/Project";
+import { Page } from "../../../shared/layouts/Page/Page";
 const defaultList: ProjectSchema[] = [
  {
   id: "1",
@@ -36,10 +35,11 @@ const defaultList: ProjectSchema[] = [
 ];
 type ProjectsPageProps = {};
 
-export const ProjectsPage = (props: ProjectsPageProps) => {
+const ProjectsPage = (props: ProjectsPageProps) => {
  return (
   <Page>
    <ProjectsList projectList={defaultList} />
   </Page>
  );
 };
+export default ProjectsPage;

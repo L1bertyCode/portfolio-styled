@@ -1,7 +1,6 @@
 import { memo } from "react";
 import { Text } from "../../../shared/ui/Text/Text";
 import styled from "styled-components";
-import { AppLink } from "../../../shared/ui/AppLink/AppLink";
 import { SocialItem } from "./SocialItem";
 import { Navbar } from "../../Navbar";
 import { Icon } from "../../../shared/ui/Icon/Icon";
@@ -22,12 +21,7 @@ export const Footer = memo((props: FooterProps) => {
      text={"GMAIL"}
     />
     <SocialItem
-     icon={
-      <Icon
-       iconId="linkedIn"
-       viewBox="0 0 30 30"
-      />
-     }
+     icon={<Icon iconId="linkedIn" viewBox="0 0 30 30" />}
      text={"LINKEDIN"}
     />
     <SocialItem

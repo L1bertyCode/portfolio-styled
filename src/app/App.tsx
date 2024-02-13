@@ -1,12 +1,11 @@
-// import styled from "styled-components";
-
 import "./styles/index.css";
 
 import { MainLayout } from "../shared/layouts/MainLayout";
 import { AppRouter } from "./providers/router";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Footer } from "../widgets/Footer";
 import { Header } from "../widgets/Header";
+import { Page } from "../shared/layouts/Page/Page";
 export enum Theme {
  DARK = "theme_dark",
  LIGHT = "theme_light",
@@ -17,7 +16,11 @@ function App() {
   <div className={`App ${theme} theme_dark`}>
    <MainLayout
     header={<Header />}
-    content={<AppRouter />}
+    content={
+     <Suspense fallback={<Page>Loading...</Page>}>
+      <AppRouter />
+     </Suspense>
+    }
     footer={<Footer />}
    />
   </div>

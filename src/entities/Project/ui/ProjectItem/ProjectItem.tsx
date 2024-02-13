@@ -31,7 +31,7 @@ export const ProjectItem = memo(
      <AppLink
       variant="filled"
       className={"link"}
-      to={"/project/" + project.id}
+      to={"/projects/" + project.id}
      >
       Show poject
      </AppLink>
