@@ -3,9 +3,9 @@ import { ContactMeForm } from "../../../../feature/contactMeForm";
 
 import { Page } from "../../../layouts/Page/Page";
 
-type Props = {};
+type ContactsPageProps = {};
 
-export const ContactsPage = (props: Props) => {
+export const ContactsPage = (props: ContactsPageProps) => {
  return (
   <StyledContactsPage>
    <ContactMeForm />

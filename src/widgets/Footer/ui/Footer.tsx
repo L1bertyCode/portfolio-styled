@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { AppLink } from "../../../shared/ui/AppLink/AppLink";
 import { SocialItem } from "./SocialItem";
 import { Navbar } from "../../Navbar";
+import { Icon } from "../../../shared/ui/Icon/Icon";
 
 interface FooterProps {
  className?: string;
@@ -16,9 +17,23 @@ export const Footer = memo((props: FooterProps) => {
  return (
   <StyledFooter className={className}>
    <div className="socialList">
-    <SocialItem text={"GMAIL"} />
-    <SocialItem text={"LINKEDIN"} />
-    <SocialItem text={"githun"} />
+    <SocialItem
+     icon={<Icon iconId="gmail" viewBox="0 0 35 35" />}
+     text={"GMAIL"}
+    />
+    <SocialItem
+     icon={
+      <Icon
+       iconId="linkedIn"
+       viewBox="0 0 30 30"
+      />
+     }
+     text={"LINKEDIN"}
+    />
+    <SocialItem
+     icon={<Icon iconId="github" viewBox="0 0 50 50" />}
+     text={"github"}
+    />
    </div>
    <Navbar />
    <Text text={`WEB DEVELOPER ${fullYear}`} />
