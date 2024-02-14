@@ -1,20 +1,22 @@
 import { ReactNode, memo } from "react";
 import { Text } from "../../../shared/ui/Text/Text";
 import styled from "styled-components";
+import { AppLink } from "../../../shared/ui/AppLink/AppLink";
 
 interface SocialItemProps {
  className?: string;
  icon?: ReactNode;
  text?: string;
+ to?: string;
 }
 
 export const SocialItem = memo((props: SocialItemProps) => {
- const { className, icon, text } = props;
+ const { to = "/", className, icon, text } = props;
  return (
   <StyledSocialItem className={className}>
-   <div className="iconWrapper">
+   <StyledIconWrapper to={to} className="iconWrapper">
     {icon && icon}
-   </div>
+   </StyledIconWrapper>
    <Text text={text?.toUpperCase()} />
   </StyledSocialItem>
  );
@@ -26,15 +28,15 @@ const StyledSocialItem = styled.div`
  flex-direction: column;
  align-items: center;
  justify-content: center;
- .iconWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--accent-gradient);
-  padding: 0;
-  margin: 0;
- }
+`;
+const StyledIconWrapper = styled(AppLink)`
+ width: 60px;
+ height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ background: var(--accent-gradient);
+ padding: 0;
+ margin: 0;
 `;

@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-type AppLinkVariant = "clear" | "filled";
+type AppLinkVariant = "default" | "clear" | "filled";
 interface AppLinkProps extends LinkProps {
  children: ReactNode;
  to: string;
@@ -48,7 +48,7 @@ export const AppLink = styled(DefaultAppLink)`
       transition: var(--transition-delay);
      }
     `;
-   default:
+   case "clear":
     return css<AppLinkProps>`
      position: relative;
      padding: 12px 6px;
@@ -87,6 +87,11 @@ export const AppLink = styled(DefaultAppLink)`
        border-radius: var(--b-rad-small);
       }
      }
+    `;
+   default:
+    return css`
+     margin: 0;
+     padding: 0;
     `;
   }
  }}

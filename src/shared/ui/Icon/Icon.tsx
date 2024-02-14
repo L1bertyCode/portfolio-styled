@@ -32,4 +32,5 @@ export const Icon = memo((props: IconProps) => {
   </StyledSvg>
  );
 });
-const StyledSvg = styled.svg``;
+const StyledSvg = styled.svg`
+`;

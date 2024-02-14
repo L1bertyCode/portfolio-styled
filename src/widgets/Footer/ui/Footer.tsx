@@ -15,7 +15,7 @@ export const Footer = memo((props: FooterProps) => {
 
  return (
   <StyledFooter className={className}>
-   <SocialList className="socialList">
+   <StyledSocialList className="socialList">
     <SocialItem
      icon={<Icon iconId="gmail" viewBox="0 0 35 35" />}
      text={"GMAIL"}
@@ -28,8 +28,8 @@ export const Footer = memo((props: FooterProps) => {
      icon={<Icon iconId="github" viewBox="0 0 50 50" />}
      text={"github"}
     />
-   </SocialList>
-   <FooterNav />
+   </StyledSocialList>
+   <StyledFooterNav />
    <Text text={`WEB DEVELOPER ${fullYear}`} />
   </StyledFooter>
  );
@@ -43,11 +43,11 @@ const StyledFooter = styled.footer<FooterProps>`
  align-items: center;
  justify-content: center;
 `;
-const FooterNav = styled(Navbar)`
+const StyledFooterNav = styled(Navbar)`
  margin-bottom: 32px;
  display: flex;
 `;
-const SocialList = styled.div`
+const StyledSocialList = styled.div`
  width: 100%;
  display: flex;
  justify-content: space-between;

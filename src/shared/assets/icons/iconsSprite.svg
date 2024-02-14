@@ -1,4 +1,4 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
 
 
 <g id="programmer" transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
@@ -61,7 +61,7 @@ fill="#ff4400" stroke="none">
 <stop offset="1" stop-color="#00D9F5"/>
 </linearGradient>
 <clipPath id="clip0_1_3002">
-<rect width="37.7365" height="37.7365" fill="white" transform="translate(0.345947)"/>
+
 </clipPath>
 </defs>
 </g>
@@ -71,7 +71,7 @@ fill="#ff4400" stroke="none">
 </g>
 <defs>
 <clipPath id="clip0_1_2988">
-<rect width="23.5853" height="23.5853" fill="white" transform="translate(0.455078 0.0755615)"/>
+
 </clipPath>
 </defs>
 </g>
@@ -133,7 +133,7 @@ fill="#ff4400" stroke="none">
 </g>
 <defs>
 <clipPath id="clip0_1_3095">
-<rect width="120" height="106" fill="white"/>
+
 </clipPath>
 </defs>
 </g>
@@ -144,7 +144,7 @@ fill="#ff4400" stroke="none">
 </g>
 <defs>
 <clipPath id="clip0_1_3072">
-<rect width="120" height="120" fill="white"/>
+
 </clipPath>
 </defs>
 </g>
@@ -165,7 +165,7 @@ fill="#ff4400" stroke="none">
 </g>
 <defs>
 <clipPath id="clip0_1_3059">
-<rect width="120" height="120" fill="white"/>
+
 </clipPath>
 </defs>
 </g>
@@ -179,4 +179,5 @@ fill="#ff4400" stroke="none">
 </g>
 </g>
 </g>
+
 </svg>

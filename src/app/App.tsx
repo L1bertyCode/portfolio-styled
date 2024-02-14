@@ -18,7 +18,10 @@ function App() {
   useState<boolean>(false);
  return (
   <div className={`app ${theme} theme_dark`}>
-   <Modal modalIsOpen={modalIsOpen}>
+   <Modal
+    modalIsOpen={modalIsOpen}
+    setModalIsOpen={setModalIsOpen}
+   >
     <ContactMeForm />
    </Modal>
    <MainLayout

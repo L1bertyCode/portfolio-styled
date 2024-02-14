@@ -1,17 +1,26 @@
-import { ReactNode, memo } from "react";
+import { HTMLAttributes, ReactNode, memo } from "react";
 import styled from "styled-components";
-
+// type CardType = Omit<
+//  HTMLAttributes<HTMLDivElement>,
+//  "onClick"
+// >;
 interface CardProps {
  children?: ReactNode;
  className?: string;
+ //  onClick?: (e?: MouseEvent) => void;
 }
 
 export const Card = memo((props: CardProps) => {
  const { children, className } = props;
  return (
-  <StyledCard className={className}>{children}</StyledCard>
+  <StyledCard
+   //  onClick={() => onClick?.()}
+   className={className}
+  >
+   {children}
+  </StyledCard>
  );
 });
-const StyledCard = styled.div`
+const StyledCard = styled.div<CardProps>`
  background: var(--card-color);
 `;
