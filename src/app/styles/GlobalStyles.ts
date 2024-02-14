@@ -7,11 +7,15 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing:border-box
 }
 body {
+  width: 100%;
   background:var(--background-color);
   color:var(--text-color);
   font:var(--font-m);
 }
+.app {
+  width: 100%;
 
+}
 a {
     text-decoration: none;
 }

@@ -7,6 +7,7 @@ import { AppLink } from "../../../../shared/ui/AppLink/AppLink";
 import { Title } from "../../../../shared/ui/Title/Title";
 import stubImg from "../../../../shared/assets/images/stub.webp";
 import { Image } from "../../../../shared/ui/Image/Image";
+import { Card } from "../../../../shared/ui/Card/Card";
 interface ProjectItemProps {
  className?: string;
  project?: ProjectSchema;
@@ -61,7 +62,7 @@ export const ProjectItem = memo(
   );
  }
 );
-const StyledProjectItem = styled.div<ProjectItemProps>`
+const StyledProjectItem = styled(Card)<ProjectItemProps>`
  max-width: 48.5%;
  height: 638px;
  background: var(--card-color);
