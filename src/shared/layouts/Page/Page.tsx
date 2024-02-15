@@ -10,11 +10,11 @@ interface PageProps {
 export const Page = (props: PageProps) => {
  const { children, className } = props;
  return (
-  <StylePage className={className}>{children}</StylePage>
+  <StyledPage className={className}>{children}</StyledPage>
  );
 };
 
-const StylePage = styled.main`
+const StyledPage = styled.main`
  padding-top: var(--header-height);
  min-height: calc(
   100vh - var(--header-height) - var(--footer-height)
