@@ -15,7 +15,7 @@ export const Footer = memo((props: FooterProps) => {
 
  return (
   <StyledFooter className={className}>
-   <StyledSocialList className="socialList">
+   {/* <StyledSocialList className="socialList">
     <SocialItem
      icon={<Icon iconId="gmail" viewBox="0 0 35 35" />}
      text={"GMAIL"}
@@ -28,7 +28,7 @@ export const Footer = memo((props: FooterProps) => {
      icon={<Icon iconId="github" viewBox="0 0 50 50" />}
      text={"github"}
     />
-   </StyledSocialList>
+   </StyledSocialList> */}
    <StyledFooterNav />
    <Text text={`WEB DEVELOPER ${fullYear}`} />
   </StyledFooter>

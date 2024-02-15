@@ -8,6 +8,7 @@ import { Title } from "../../../../shared/ui/Title/Title";
 import stubImg from "../../../../shared/assets/images/stub.webp";
 import { Image } from "../../../../shared/ui/Image/Image";
 import { Card } from "../../../../shared/ui/Card/Card";
+import { theme } from "../../../../app/styles/Theme";
 interface ProjectItemProps {
  className?: string;
  project?: ProjectSchema;
@@ -63,11 +64,14 @@ export const ProjectItem = memo(
  }
 );
 const StyledProjectItem = styled(Card)<ProjectItemProps>`
- max-width: 48.5%;
+ width: 48.5%;
  height: 638px;
  background: var(--card-color);
  border-radius: var(--b-rad-small);
  overflow: hidden;
+ @media ${theme.media.tablet} {
+  width: 100%;
+ }
 
  .imgBlock {
   position: relative;

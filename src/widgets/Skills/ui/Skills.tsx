@@ -21,10 +21,10 @@ const defaultSkillsList: SkillItemSchema[] = [
   text: "git",
   viewBox: "0 0 420 420",
  },
- {
-  iconId: "jest",
-  text: "jest",
- },
+ //  {
+ //   iconId: "jest",
+ //   text: "jest",
+ //  },
  {
   iconId: "javascript",
   text: "javascript",

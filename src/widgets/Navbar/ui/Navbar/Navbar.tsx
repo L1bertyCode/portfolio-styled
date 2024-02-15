@@ -36,7 +36,10 @@ const StyledNavbar = styled.nav`
  align-content: center;
  justify-content: end;
 
- a {
+ ${AppLink} {
   margin-right: 20px;
+ }
+ ${AppLink}:last-child {
+  margin-right: 0%;
  }
 `;

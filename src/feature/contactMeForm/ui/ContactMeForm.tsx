@@ -5,8 +5,7 @@ import styled from "styled-components";
 import { Textarea } from "../../../shared/ui/Textarea/Textarea";
 
 import { Button } from "../../../shared/ui/Button/Button";
-import { Icon } from "../../../shared/ui/Icon/Icon";
-import { Text } from "../../../shared/ui/Text/Text";
+import { theme } from "../../../app/styles/Theme";
 
 interface ContactMeFormProps {
  className?: string;
@@ -17,63 +16,26 @@ export const ContactMeForm = memo(
   const { className } = props;
   return (
    <ContactMeFormStyled className={className}>
-    <StyledForm>
-     <StyledField label="Name" />
-     <StyledField label="Email" />
-     <StyledTextarea label="Message" />
-     <StyledButton variant="filled">Submit</StyledButton>
-    </StyledForm>
-    <StyledIFormnfo>
-     <StyledFormInfoItem>
-      <Icon
-       width="50"
-       height="50"
-       viewBox="0 0 70 70"
-       iconId="programmer"
-      />
-      <div>
-       <Text text={"Location"} />
-       <Text text={"Moscow"} />
-      </div>
-     </StyledFormInfoItem>
-     <StyledFormInfoItem>
-      <Icon
-       width="50"
-       height="50"
-       viewBox="0 0 70 70"
-       iconId="programmer"
-      />
-      <div>
-       <Text text={"Phone"} />
-       <Text text={"+7-911-888-77-77"} />
-      </div>
-     </StyledFormInfoItem>
-     <StyledFormInfoItem>
-      <Icon
-       width="50"
-       height="50"
-       viewBox="0 0 70 70"
-       iconId="programmer"
-      />
-      <div>
-       <Text text={"Email"} />
-       <Text text={"libertycodeg@gmail.com"} />
-      </div>
-     </StyledFormInfoItem>
-    </StyledIFormnfo>
+    <StyledField label="Name" />
+    <StyledField label="Email" />
+    <StyledTextarea label="Message" />
+    <StyledButton variant="filled">Submit</StyledButton>
    </ContactMeFormStyled>
   );
  }
 );
 const ContactMeFormStyled = styled.div`
  display: flex;
- justify-content: space-around;
+ flex-direction: column;
+ justify-content: center;
  align-items: center;
- width: 930px;
+ width: 510px;
+ margin: 0 auto;
+ @media ${theme.media.mobile} {
+  width: 100%;
+ }
 `;
-const StyledForm = styled.form`
- width: 430px;
-`;
+
 const StyledField = styled(Input)`
  margin-bottom: 20px;
 `;
@@ -86,12 +48,4 @@ const StyledButton = styled(Button)`
  display: flex;
  align-items: center;
  justify-content: center;
-`;
-const StyledIFormnfo = styled.div`
- display: flex;
- flex-direction: column;
-`;
-const StyledFormInfoItem = styled.div`
- display: flex;
- align-items: center;
 `;
