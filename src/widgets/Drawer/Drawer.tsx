@@ -1,15 +1,17 @@
 import { memo } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { AppLink } from "../../shared/ui/AppLink/AppLink";
+import { BurgerButton } from "../../shared/ui/BurgerButton/BurgerButton";
 
 interface DrawerProps {
- className?: string;
+ isOpen?: boolean;
+ onClick?: () => void;
 }
 
 export const Drawer = memo((props: DrawerProps) => {
- const { className } = props;
  return (
-  <StyledDrawer className={className}>
+  <StyledDrawer {...props}>
+   <StyledBurgerButton isOpen />
    <AppLink variant="clear" className={"link"} to="/">
     Home
    </AppLink>
@@ -30,14 +32,27 @@ export const Drawer = memo((props: DrawerProps) => {
   </StyledDrawer>
  );
 });
-const StyledDrawer = styled.nav`
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+
+const StyledDrawer = styled.nav<DrawerProps>`
  position: fixed;
  right: 0;
- top: 0%;
+ top: 0;
  left: 0;
+ z-index: 11;
+ padding: 20px;
  background: var(--card-color);
+ display: none;
+ ${(props: DrawerProps) =>
+  props.isOpen === true &&
+  css<DrawerProps>`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  `}
+`;
+const StyledBurgerButton = styled(BurgerButton)`
+ position: absolute;
+ top: 20px;
+ right: 20px;
 `;

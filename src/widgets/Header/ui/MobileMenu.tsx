@@ -1,66 +1,31 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import styled from "styled-components";
-import { Navbar } from "../../Navbar";
-import { AppLink } from "../../../shared/ui/AppLink/AppLink";
 import { Drawer } from "../../Drawer/Drawer";
+import { BurgerButton } from "../../../shared/ui/BurgerButton/BurgerButton";
+import { theme } from "../../../app/styles/Theme";
 
-interface MobileMenuProps {
- className?: string;
-}
+interface MobileMenuProps {}
 
 export const MobileNav = memo((props: MobileMenuProps) => {
- const { className } = props;
+ const [drawerIsOpen, setDrawerIsOpen] =
+  useState<boolean>(false);
+ const onToggleDrawer = () => {
+  setDrawerIsOpen((prev) => !prev);
+ };
  return (
-  <StyledMobileNavWrapper className={className}>
-   <StyledBurgerButton>
-    <span></span>
-   </StyledBurgerButton>
-   <Drawer />
-  </StyledMobileNavWrapper>
+  <StyledMobileNav>
+   <BurgerButton
+    isOpen={drawerIsOpen}
+    onClick={onToggleDrawer}
+   />
+   <Drawer isOpen={drawerIsOpen} onClick={onToggleDrawer} />
+  </StyledMobileNav>
  );
 });
-const StyledMobileNavWrapper = styled.div``;
-
-const StyledBurgerButton = styled.button`
- position: relative;
- content: "";
- margin: 16px;
- width: 36px;
- height: 2px;
- border: none;
- outline: none;
- border-radius: var(--b-rad-small);
- background: var(--accent-color);
- cursor: pointer;
-
- &:before,
- &:after {
-  position: absolute;
-  content: "";
-  width: 36px;
-  height: 2px;
-  border-radius: var(--b-rad-small);
-  background: var(--accent-color);
-  transform: translateX(-50%);
- }
- &:before {
-  top: -10px;
- }
- &:after {
-  top: 10px;
- }
- &:hover {
-  background: transparent;
-  transition-delay: var(--transition-delay);
-  &:before {
-   top: 8.5px;
-   transform: rotate(45deg) translateX(-50%);
-   transition-delay: var(--transition-delay);
-  }
-  &:after {
-   top: -8.5px;
-   transform: rotate(-45deg) translateX(-50%);
-   transition-delay: var(--transition-delay);
-  }
+const StyledMobileNav = styled.div`
+ display: none;
+ margin-right: 20px;
+ @media ${theme.media.mobile} {
+  display: block;
  }
 `;

@@ -22,7 +22,7 @@ export const Header = (props: HeaderProps) => {
    </StyledHeaderLogo>
    <StyledHeaderNavWrapper>
     <StyledHeaderNavbar />
-    <StyledBurger />
+    <MobileNav />
     <Button
      onClick={() => setModalIsOpen(true)}
      variant="filled"
@@ -65,11 +65,4 @@ const StyledHeaderNavWrapper = styled.menu`
  justify-content: space-between;
  align-items: center;
  width: fit-content;
-`;
-const StyledBurger = styled(MobileNav)`
- display: block;
- margin-right: 20px;
- @media ${theme.media.mobile} {
-  display: block;
- }
 `;
