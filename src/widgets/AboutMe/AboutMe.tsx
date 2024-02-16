@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Text } from "../../shared/ui/Text/Text";
 import { Title } from "../../shared/ui/Title/Title";
+import { theme } from "../../app/styles/Theme";
 interface AboutMeProps {
  className?: string;
 }
@@ -23,6 +24,9 @@ export const AboutMe = (props: AboutMeProps) => {
 const StyledAboutMe = styled.section`
  width: 65%;
  margin-left: 0;
+ @media ${theme.media.tablet} {
+  width: 100%;
+ }
 
  .title {
   margin-bottom: var(--indent-xl);

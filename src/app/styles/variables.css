@@ -47,15 +47,27 @@
  --font-xl: var(--font-size-xl) / var(--font-line-xl)
   var(--font-family-main);
 
- /* xxl */
- --font-size-xxl: 32px;
- --font-line-xxl: 40px;
- --font-xxl: var(--font-size-xxl) / var(--font-line-xxl)
+ /* 2xl */
+ --font-size-2xl: 32px;
+ --font-line-2xl: 40px;
+ --font-2xl: var(--font-size-2xl) / var(--font-line-2xl)
   var(--font-family-main);
 
- /* xxxl */
- --font-size-xxxl: 56px;
- --font-line-xxxl: 64px;
- --font-xxxl: var(--font-size-xxxl) / var(--font-line-xxxl)
+ /* 3xl */
+ --font-size-3xl: 40px;
+ --font-line-3xl: 48px;
+ --font-3xl: var(--font-size-3xl) / var(--font-line-3xl)
+  var(--font-family-main);
+
+ /* 4xl */
+ --font-size-4xl: 48px;
+ --font-line-4xl: 56px;
+ --font-4xl: var(--font-size-4xl) / var(--font-line-4xl)
+  var(--font-family-main);
+
+ /* 5xl */
+ --font-size-5xl: 56px;
+ --font-line-5xl: 64px;
+ --font-5xl: var(--font-size-5xl) / var(--font-line-5xl)
   var(--font-family-main);
 }

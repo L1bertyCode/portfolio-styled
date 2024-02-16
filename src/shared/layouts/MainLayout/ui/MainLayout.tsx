@@ -1,5 +1,6 @@
 import { ReactNode, memo } from "react";
 import styled from "styled-components";
+import { theme } from "../../../../app/styles/Theme";
 
 interface MainLayoutProps {
  header: ReactNode;
@@ -27,4 +28,7 @@ export const MainLayoutStyled = styled.div`
  max-width: 1200px;
  width: 100%;
  padding: 0 30px;
+ @media ${theme.media.mobile} {
+  padding: 0 15px;
+ }
 `;

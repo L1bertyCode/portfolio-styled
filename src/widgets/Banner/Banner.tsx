@@ -1,10 +1,12 @@
 import { memo } from "react";
 import { Text } from "../../shared/ui/Text/Text";
-import { Button } from "../../shared/ui/Button/Button";
+
 import styled from "styled-components";
 import ava from "../../shared/assets/images/ava.png";
 import { Image } from "../../shared/ui/Image/Image";
 import { Title } from "../../shared/ui/Title/Title";
+import { ContactButton } from "../../feature/contactButton/ContactButton";
+import { theme } from "../../app/styles/Theme";
 interface BannerProps {
  className?: string;
 }
@@ -13,38 +15,43 @@ export const Banner = memo((props: BannerProps) => {
  const { className } = props;
  return (
   <StyledBanner className={className}>
-   <div className="info">
+   <Info>
     <Title title="Web developer" TitleTag="h1" />
-    <Title
-     className="title"
+    <Name
      title="Vyacheslav Dev"
      TitleTag="h2"
      colorType="accent"
     />
     <Text text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt." />
-    <Button className="btn" variant="filled">
-     Contact Me
-    </Button>
-   </div>
-   <Image className="img" src={ava} alt="ava" />
+    <BannerButton />
+   </Info>
+   <BunnerImage src={ava} alt="ava" />
   </StyledBanner>
  );
 });
+const Name = styled(Title)`
+ margin-bottom: var(--indent-l);
+`;
+const Info = styled.div`
+ width: 50%;
+ @media ${theme.media.mobile} {
+  width: 100%;
+ }
+`;
+const BannerButton = styled(ContactButton)`
+ margin-top: var(--indent-xl);
+`;
+const BunnerImage = styled(Image)`
+ width: 45%;
+ @media ${theme.media.mobile} {
+  width:80%;
+ }
+`;
 const StyledBanner = styled.div<BannerProps>`
  display: flex;
  justify-content: space-between;
  align-items: center;
-
- .info {
-  width: 50%;
- }
- .title {
-  margin-bottom: var(--indent-l);
- }
- .btn {
-  margin-top: var(--indent-xl);
- }
- .img {
-  width: 40%;
+ @media ${theme.media.mobile} {
+  flex-direction: column;
  }
 `;

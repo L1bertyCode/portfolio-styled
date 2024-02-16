@@ -6,6 +6,7 @@ import { Button } from "../../../shared/ui/Button/Button";
 import { Dispatch, SetStateAction } from "react";
 import { theme } from "../../../app/styles/Theme";
 import { MobileNav } from "./MobileMenu";
+import { ContactButton } from "../../../feature/contactButton/ContactButton";
 
 interface HeaderProps {
  modalIsOpen?: boolean;
@@ -23,12 +24,7 @@ export const Header = (props: HeaderProps) => {
    <StyledHeaderNavWrapper>
     <StyledHeaderNavbar />
     <MobileNav />
-    <Button
-     onClick={() => setModalIsOpen(true)}
-     variant="filled"
-    >
-     Contact Me
-    </Button>
+    <ContactButton onClick={() => setModalIsOpen(true)} />
    </StyledHeaderNavWrapper>
   </StyledHeader>
  );
@@ -49,6 +45,9 @@ const StyledHeader = styled.header`
  height: var(--header-height);
  background: var(--background-color);
  opacity: 0.95;
+ @media ${theme.media.mobile} {
+  padding: 0 15px;
+ }
 `;
 const StyledHeaderNavbar = styled(Navbar)`
  margin-right: 20px;
