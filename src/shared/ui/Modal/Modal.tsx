@@ -32,9 +32,10 @@ export const Modal = (props: ModalProps) => {
   return null;
  }
  return (
-  <StyledModal 
-  // onClick={onCloseModal}
-   className={className}>
+  <StyledModal
+   // onClick={onCloseModal}
+   className={className}
+  >
    <ModalCard>
     {
      <>
@@ -60,7 +61,7 @@ const StyledModal = styled.div`
 `;
 const ModalCard = styled(Card)`
  position: relative;
- padding: var(--indent-xxxl);
+ padding: var(--indent-40);
  border-radius: var(--b-rad-small);
 `;
 const ModalButton = styled(Button)`

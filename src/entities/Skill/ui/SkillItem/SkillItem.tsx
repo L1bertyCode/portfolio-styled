@@ -26,6 +26,6 @@ const StyledSkillItem = styled.div`
  display: flex;
  align-items: center;
  flex-direction: column;
- gap: var(--indent-m);
- padding: 0 0 var(--indent-xxxl) 0;
+ gap: var(--indent-12);
+ padding: 0 0 var(--indent-40) 0;
 `;

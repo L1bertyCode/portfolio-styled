@@ -29,7 +29,7 @@ const StyledAboutMe = styled.section`
  }
 
  .title {
-  margin-bottom: var(--indent-xl);
+  margin-bottom: var(--indent-20);
  }
  .text {
   padding-left: 20px;

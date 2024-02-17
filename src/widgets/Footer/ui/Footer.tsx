@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { SocialItem } from "./SocialItem";
 import { Navbar } from "../../Navbar";
 import { Icon } from "../../../shared/ui/Icon/Icon";
+import { theme } from "../../../app/styles/Theme";
 
 interface FooterProps {
  className?: string;
@@ -15,7 +16,7 @@ export const Footer = memo((props: FooterProps) => {
 
  return (
   <StyledFooter className={className}>
-   {/* <StyledSocialList className="socialList">
+   <StyledSocialList className="socialList">
     <SocialItem
      icon={<Icon iconId="gmail" viewBox="0 0 35 35" />}
      text={"GMAIL"}
@@ -28,14 +29,15 @@ export const Footer = memo((props: FooterProps) => {
      icon={<Icon iconId="github" viewBox="0 0 50 50" />}
      text={"github"}
     />
-   </StyledSocialList> */}
+   </StyledSocialList>
    <StyledFooterNav />
    <Text text={`WEB DEVELOPER ${fullYear}`} />
   </StyledFooter>
  );
 });
 const StyledFooter = styled.footer<FooterProps>`
- width: 320px;
+ max-width: 290px;
+ width: 100%;
  margin: 0 auto;
  height: var(--footer-height);
  display: flex;
@@ -46,6 +48,9 @@ const StyledFooter = styled.footer<FooterProps>`
 const StyledFooterNav = styled(Navbar)`
  margin-bottom: 32px;
  display: flex;
+ @media ${theme.media.mobile} {
+  display: none;
+ }
 `;
 const StyledSocialList = styled.div`
  width: 100%;

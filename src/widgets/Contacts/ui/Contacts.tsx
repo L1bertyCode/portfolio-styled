@@ -23,6 +23,6 @@ export const Contacts = memo((props: ContactsProps) => {
 });
 const StyledContacts = styled.section<ContactsProps>`
  .title {
-  margin-bottom: var(--indent-xxxl);
+  margin-bottom: var(--indent-40);
  }
 `;

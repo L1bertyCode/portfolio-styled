@@ -82,6 +82,6 @@ export const Skills = memo((props: SkillsProps) => {
 });
 const StyledSkills = styled.section`
  .title {
-  margin-bottom: var(--indent-xxxl);
+  margin-bottom: var(--indent-40);
  }
 `;

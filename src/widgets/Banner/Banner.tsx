@@ -30,21 +30,23 @@ export const Banner = memo((props: BannerProps) => {
  );
 });
 const Name = styled(Title)`
- margin-bottom: var(--indent-l);
+ margin-bottom: var(--indent-16);
 `;
 const Info = styled.div`
  width: 50%;
  @media ${theme.media.mobile} {
   width: 100%;
+  text-align: center;
  }
 `;
 const BannerButton = styled(ContactButton)`
- margin-top: var(--indent-xl);
+ margin-top: var(--indent-20);
 `;
 const BunnerImage = styled(Image)`
  width: 45%;
  @media ${theme.media.mobile} {
-  width:80%;
+  width: 80%;
+  margin-top: var(--indent-20);
  }
 `;
 const StyledBanner = styled.div<BannerProps>`

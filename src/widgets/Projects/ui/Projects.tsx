@@ -72,9 +72,9 @@ const StyledProjects = styled.section`
   align-items: center;
  }
  .title {
-  margin-bottom: var(--indent-xxxl);
+  margin-bottom: var(--indent-40);
  }
  .tabs {
-  margin-bottom: var(--indent-xxl);
+  margin-bottom: var(--indent-24);
  }
 `;

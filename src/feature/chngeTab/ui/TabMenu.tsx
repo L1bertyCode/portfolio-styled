@@ -29,7 +29,7 @@ export const TabMenu = memo((props: TabMenuProps) => {
 });
 const StyledTabMenu = styled.div`
  .btn {
-  margin-right: var(--indent-m);
+  margin-right: var(--indent-12);
   &:last-child {
    margin-right: 0;
   }

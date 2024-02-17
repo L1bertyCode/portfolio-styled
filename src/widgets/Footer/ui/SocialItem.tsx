@@ -2,6 +2,7 @@ import { ReactNode, memo } from "react";
 import { Text } from "../../../shared/ui/Text/Text";
 import styled from "styled-components";
 import { AppLink } from "../../../shared/ui/AppLink/AppLink";
+import { theme } from "../../../app/styles/Theme";
 
 interface SocialItemProps {
  className?: string;
@@ -30,6 +31,7 @@ const StyledSocialItem = styled.div`
  justify-content: center;
 `;
 const StyledIconWrapper = styled(AppLink)`
+ width: 100%;
  width: 60px;
  height: 60px;
  display: flex;
@@ -39,4 +41,8 @@ const StyledIconWrapper = styled(AppLink)`
  background: var(--accent-gradient);
  padding: 0;
  margin: 0;
+ @media ${theme.media.mobile} {
+  width: 40px;
+  height: 40px;
+ }
 `;

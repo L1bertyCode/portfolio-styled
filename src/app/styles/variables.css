@@ -1,11 +1,11 @@
 :root {
  /* indent */
- --indent-s: 8px;
- --indent-m: 12px;
- --indent-l: 16px;
- --indent-xl: 20px;
- --indent-xxl: 24px;
- --indent-xxxl: 40px;
+ --indent-8: 8px;
+ --indent-12: 12px;
+ --indent-16: 16px;
+ --indent-20: 20px;
+ --indent-24: 24px;
+ --indent-40: 40px;
 
  --transition-delay: 0.3s;
 
