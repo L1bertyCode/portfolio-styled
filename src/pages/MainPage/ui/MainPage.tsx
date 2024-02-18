@@ -5,12 +5,14 @@ import { Projects } from "../../../widgets/Projects";
 import { Skills } from "../../../widgets/Skills";
 import { Contacts } from "../../../widgets/Contacts";
 import { Page } from "../../../shared/layouts/Page/Page";
+import { ScrollTop } from "../../../feature/scrollTop";
 
 type MainPageProps = {};
 
 const MainPage = (props: MainPageProps) => {
  return (
   <StyledPage>
+   <ScrollTop />
    <Banner className="section" />
    <AboutMe className="section" />
    <Projects className="section" />
