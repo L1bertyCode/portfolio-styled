@@ -90,6 +90,11 @@ const StyledProjectItem = styled(Card)<ProjectItemProps>`
    left: 0;
    bottom: 0;
    z-index: 1;
+   background: #00000099;
+   opacity: 0;
+   @media ${theme.media.tablet} {
+    opacity: 1;
+   }
   }
   .img {
    border-radius: 12px 12px 0 0;
@@ -105,19 +110,22 @@ const StyledProjectItem = styled(Card)<ProjectItemProps>`
    left: 50%;
    z-index: 2;
    transform: translate3d(-50%, -50%, 0);
+   @media ${theme.media.tablet} {
+    display: block;
+   }
   }
  }
  &:hover {
   .imgBlock {
    &:before {
-    background: #00000099;
+    opacity: 1;
    }
-
    .link {
     display: block;
    }
   }
  }
+
  .content {
   width: 100%;
   padding: 12px;

@@ -1,37 +1,51 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import { Button } from "../../../shared/ui/Button/Button";
 import styled from "styled-components";
+import { theme } from "../../../app/styles/Theme";
 
 interface TabMenuProps {
  className?: string;
 }
-const array = [
- { name: "All", isActive: true },
- { name: "React JS", isActive: false },
- { name: "React Native", isActive: false },
- { name: "Vue", isActive: false },
+const arrayTabs = [
+ "All",
+ "React JS",
+ "React Native",
+ "Vue",
 ];
 export const TabMenu = memo((props: TabMenuProps) => {
  const { className } = props;
+ const [activeTab, setActiveTab] =
+  useState<(typeof arrayTabs)[keyof typeof arrayTabs]>(
+   "All"
+  );
  return (
   <StyledTabMenu className={className}>
-   {array.map((arrayItem, i) => (
+   {arrayTabs.map((arrayTabsItem, i) => (
     <Button
      className="btn"
      key={i}
-     isActive={arrayItem.isActive}
+     isActive={activeTab === arrayTabsItem}
+     onClick={() => setActiveTab(arrayTabsItem)}
     >
-     {arrayItem.name}
+     {arrayTabsItem}
     </Button>
    ))}
   </StyledTabMenu>
  );
 });
 const StyledTabMenu = styled.div`
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: var(--indent-20);
  .btn {
-  margin-right: var(--indent-12);
+  margin-bottom: var(--indent-8);
   &:last-child {
    margin-right: 0;
   }
+ }
+ @media ${theme.media.mobile} {
+  gap: 4px;
  }
 `;

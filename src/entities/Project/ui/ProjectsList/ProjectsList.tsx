@@ -40,7 +40,7 @@ const StyledProjectsList = styled.section`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 32px;

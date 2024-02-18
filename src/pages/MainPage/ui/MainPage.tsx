@@ -21,7 +21,7 @@ const MainPage = (props: MainPageProps) => {
 };
 const StyledPage = styled(Page)`
  .section {
-  margin-bottom: 60px;
+  margin-bottom: var(--indent-40);
  }
 `;
 export default MainPage;

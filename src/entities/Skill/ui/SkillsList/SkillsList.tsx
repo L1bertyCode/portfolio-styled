@@ -2,6 +2,7 @@ import { memo } from "react";
 import { SkillItemSchema } from "../../model/types/skill";
 import { SkillItem } from "../SkillItem/SkillItem";
 import styled from "styled-components";
+import { theme } from "../../../../app/styles/Theme";
 
 interface SkillsListProps {
  skillsList?: SkillItemSchema[];
@@ -23,4 +24,8 @@ const StyledSkillsList = styled.div`
  align-items: center;
  flex-wrap: wrap;
  justify-content: center;
+ gap: var(--indent-20);
+ @media ${theme.media.mobile} {
+  gap: var(--indent-16);
+ }
 `;

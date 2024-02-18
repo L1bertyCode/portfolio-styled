@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import styled, { css } from "styled-components";
+import { theme } from "../../../app/styles/Theme";
 type ButtonVariant = "clear" | "filled" | "outlined";
 interface ButtonProps
  extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -25,7 +26,9 @@ const StyledButton = styled.button<ButtonProps>`
  border-radius: var(--b-rad-small);
  cursor: pointer;
  transition: var(--transition-delay);
-
+ @media ${theme.media.mobile} {
+  padding: var(--indent-8) var(--indent-12);
+ }
  ${(props) => {
   switch (props.variant) {
    case "filled":
