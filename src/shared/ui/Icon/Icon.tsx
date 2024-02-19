@@ -33,4 +33,12 @@ export const Icon = memo((props: IconProps) => {
  );
 });
 const StyledSvg = styled.svg`
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ use {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
 `;

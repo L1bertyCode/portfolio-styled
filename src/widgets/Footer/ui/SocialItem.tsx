@@ -31,16 +31,24 @@ const StyledSocialItem = styled.div`
  justify-content: center;
 `;
 const StyledIconWrapper = styled(AppLink)`
- width: 100%;
- width: 60px;
- height: 60px;
+ width: 6 0px;
+ height: 6 0px;
  display: flex;
  align-items: center;
  justify-content: center;
  border-radius: 50%;
  background: var(--accent-gradient);
- padding: 0;
- margin: 0;
+ svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  use {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+ }
+
  @media ${theme.media.mobile} {
   width: 40px;
   height: 40px;

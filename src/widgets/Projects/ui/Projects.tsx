@@ -30,20 +30,20 @@ const defaultList: ProjectSchema[] = [
   description:
    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
  },
- {
-  id: "3",
-  title: "TITLE PROJECT",
-  skills: ["Javascript", "PostgreSQL", "React", "Redux"],
-  description:
-   "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
- },
- {
-  id: "4",
-  title: "Instagramm",
-  skills: ["Javascript", "PostgreSQL", "React", "Redux"],
-  description:
-   "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
- },
+//  {
+//   id: "3",
+//   title: "TITLE PROJECT",
+//   skills: ["Javascript", "PostgreSQL", "React", "Redux"],
+//   description:
+//    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+//  },
+//  {
+//   id: "4",
+//   title: "Instagramm",
+//   skills: ["Javascript", "PostgreSQL", "React", "Redux"],
+//   description:
+//    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+//  },
 ];
 export const Projects = memo((props: ProjectsProps) => {
  const { className } = props;
@@ -60,6 +60,13 @@ export const Projects = memo((props: ProjectsProps) => {
     <Button className="btn" variant="filled">
      SEE ALL PROJECTS
     </Button>
+    {/* <AppLink
+     to="/projects"
+     className="btn"
+     variant="filled"
+    >
+     SEE ALL PROJECTS
+    </AppLink> */}
    </div>
   </StyledProjects>
  );

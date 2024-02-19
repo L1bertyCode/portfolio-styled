@@ -21,10 +21,10 @@ const defaultSkillsList: SkillItemSchema[] = [
   text: "git",
   viewBox: "0 0 420 420",
  },
- //  {
- //   iconId: "jest",
- //   text: "jest",
- //  },
+ {
+  iconId: "jest",
+  text: "jest",
+ },
  {
   iconId: "javascript",
   text: "javascript",
@@ -33,10 +33,10 @@ const defaultSkillsList: SkillItemSchema[] = [
   iconId: "mongoDb",
   text: "mongo Db",
  },
- {
-  iconId: "next",
-  text: "next",
- },
+ //  {
+ //   iconId: "next",
+ //   text: "next",
+ //  },
  {
   iconId: "postgreSql",
   text: "postgreSql",

@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 body {
   width: 100%;
+  min-width:320px;
   background:var(--background-color);
   color:var(--text-color);
   font:var(--font-m);
