@@ -8,6 +8,7 @@ import { Header } from "../widgets/Header";
 import { Page } from "../shared/layouts/Page/Page";
 import { Modal } from "../shared/ui/Modal/Modal";
 import { ContactMeForm } from "../feature/contactMeForm";
+import { PageWithLoader } from "../widgets/PageWithLoader";
 export enum Theme {
  DARK = "theme_dark",
  LIGHT = "theme_light",
@@ -32,7 +33,7 @@ function App() {
      />
     }
     content={
-     <Suspense fallback={<Page>Loading...</Page>}>
+     <Suspense fallback={<PageWithLoader />}>
       <AppRouter />
      </Suspense>
     }
