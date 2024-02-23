@@ -9,6 +9,7 @@ import {
 import { Title } from "../../../shared/ui/Title/Title";
 import { Button } from "../../../shared/ui/Button/Button";
 import { TabMenu } from "../../../feature/chngeTab";
+import { AppLink } from "../../../shared/ui/AppLink/AppLink";
 
 interface ProjectsProps {
  className?: string;
@@ -57,16 +58,16 @@ export const Projects = memo((props: ProjectsProps) => {
    <div className="content">
     <TabMenu className="tabs" />
     <ProjectsList projectList={defaultList} />
-    <Button className="btn" variant="filled">
+    {/* <Button className="btn" variant="filled">
      SEE ALL PROJECTS
-    </Button>
-    {/* <AppLink
+    </Button> */}
+    <AppLink
      to="/projects"
      className="btn"
      variant="filled"
     >
      SEE ALL PROJECTS
-    </AppLink> */}
+    </AppLink>
    </div>
   </StyledProjects>
  );

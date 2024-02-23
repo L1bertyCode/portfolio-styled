@@ -38,7 +38,7 @@ export const AppLink = styled(DefaultAppLink)`
     return css<AppLinkProps>`
      padding: 12px 20px;
      border-radius: var(--b-rad-small);
-
+     border: 1px solid transparent;
      background: var(--accent-gradient);
      color: var(--background-color);
      &:hover {

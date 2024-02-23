@@ -16,7 +16,5 @@ export const Page = (props: PageProps) => {
 
 const StyledPage = styled.main`
  padding-top: var(--header-height);
- min-height: calc(
-  100vh - var(--header-height) - var(--footer-height)
- );
+ min-height: calc(100vh - var(--footer-height));
 `;

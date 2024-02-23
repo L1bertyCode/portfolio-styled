@@ -26,4 +26,5 @@ const StyledPage = styled(Page)`
   margin-bottom: var(--indent-40);
  }
 `;
+
 export default MainPage;

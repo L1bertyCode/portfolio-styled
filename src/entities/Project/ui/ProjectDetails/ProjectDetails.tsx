@@ -68,6 +68,7 @@ const StyledProjectDetailsPage = styled(Page)`
  background: var(--card-color);
  border-radius: var(--b-rad-small);
  overflow: hidden;
+
  @media ${theme.media.tablet} {
  }
 
@@ -81,6 +82,7 @@ const StyledProjectDetailsPage = styled(Page)`
  .content {
   width: 100%;
   padding: 12px;
+  text-align: center;
  }
  .porject_title {
   width: 100%;
@@ -89,13 +91,13 @@ const StyledProjectDetailsPage = styled(Page)`
 
  .skillsList {
   width: 100%;
-  margin-left: 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
  }
  .skill {
   padding: 12px 20px;
-  margin: 0 0 20px 12px;
+  margin: 0 12px 20px 0;
   background: var(--accent-gradient);
   border-radius: var(--b-rad-small);
   color: var(--card-color);

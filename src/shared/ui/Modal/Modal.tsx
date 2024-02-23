@@ -2,6 +2,7 @@ import { Dispatch, ReactNode, SetStateAction } from "react";
 import styled from "styled-components";
 import { Card } from "../Card/Card";
 import { Button } from "../Button/Button";
+import { theme } from "../../../app/styles/Theme";
 
 interface ModalProps {
  children?: ReactNode;
@@ -63,9 +64,13 @@ const ModalCard = styled(Card)`
  position: relative;
  padding: var(--indent-40);
  border-radius: var(--b-rad-small);
+ box-sizing: border-box;
+ @media ${theme.media.mobile} {
+  width: 100%;
+ }
 `;
 const ModalButton = styled(Button)`
  position: absolute;
- top: -50px;
- right: -60px;
+ top: 10px;
+ right: 10px;
 `;
