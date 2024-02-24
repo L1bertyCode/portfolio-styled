@@ -46,7 +46,7 @@ export const defaultList: ProjectSchema[] = [
   skills: ["Javascript", "PostgreSQL", "React", "Redux"],
   description:
    "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-  type: "react native",
+  type: "native",
  },
  {
   id: "4",
@@ -58,6 +58,7 @@ export const defaultList: ProjectSchema[] = [
   type: "Spa",
  },
 ];
+
 export const Projects = memo((props: ProjectsProps) => {
  const { className } = props;
 
@@ -73,20 +74,27 @@ export const Projects = memo((props: ProjectsProps) => {
  });
 
  let filtredWorks = defaultList;
- if (activeTab.status === "react") {
-  filtredWorks = defaultList.filter(
-   (filtredWorksItem) => filtredWorksItem.type
-  );
- }
- if (activeTab.status === "vue") {
-  filtredWorks = defaultList.filter(
-   (filtredWorksItem) => filtredWorksItem.type
-  );
- }
- if (activeTab.status === "native") {
-  filtredWorks = defaultList.filter(
-   (filtredWorksItem) => filtredWorksItem.type
-  );
+
+ switch (activeTab.status) {
+  case "react":
+   filtredWorks = defaultList.filter(
+    (filtredWorksItem) => filtredWorksItem.type === "react"
+   );
+   break;
+  case "vue":
+   filtredWorks = defaultList.filter(
+    (filtredWorksItem) => filtredWorksItem.type === "vue"
+   );
+   break;
+  case "native":
+   filtredWorks = defaultList.filter(
+    (filtredWorksItem) => filtredWorksItem.type === "native"
+   );
+   break;
+
+  default:
+   filtredWorks = defaultList;
+   break;
  }
  const changeFilterStatus = (tab: Tab) => setActiveTab(tab);
  return (
