@@ -2,37 +2,36 @@ import { memo, useState } from "react";
 import { Button } from "../../../shared/ui/Button/Button";
 import styled from "styled-components";
 import { theme } from "../../../app/styles/Theme";
+import { Tab } from "../../../widgets/Projects/ui/Projects";
 
 interface TabMenuProps {
+ arrayTabs: Tab[];
+ activeTab: Tab;
+ onActiveTab: (tab: Tab) => void;
  className?: string;
 }
-const arrayTabs = [
- "All",
- "React JS",
- "React Native",
- "Vue",
-];
-export const TabMenu = memo((props: TabMenuProps) => {
- const { className } = props;
- const [activeTab, setActiveTab] =
-  useState<(typeof arrayTabs)[keyof typeof arrayTabs]>(
-   "All"
-  );
+
+export const TabMenu = (props: TabMenuProps) => {
+ const { arrayTabs, activeTab, onActiveTab, className } =
+  props;
+
  return (
   <StyledTabMenu className={className}>
    {arrayTabs.map((arrayTabsItem, i) => (
     <Button
      className="btn"
      key={i}
-     isActive={activeTab === arrayTabsItem}
-     onClick={() => setActiveTab(arrayTabsItem)}
+     isActive={activeTab.status === arrayTabsItem.status}
+     onClick={() => {
+      onActiveTab(arrayTabsItem);
+     }}
     >
-     {arrayTabsItem}
+     {arrayTabsItem.title}
     </Button>
    ))}
   </StyledTabMenu>
  );
-});
+};
 const StyledTabMenu = styled.div`
  display: flex;
  align-items: center;

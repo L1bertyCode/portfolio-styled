@@ -8,6 +8,8 @@ interface ProjectsItemPageProps {
 const ProjectsItemPage = memo(
  (props: ProjectsItemPageProps) => {
   const { id } = useParams();
+  console.log("id", id);
+
   const { className } = props;
   return (
    <div className={className}>

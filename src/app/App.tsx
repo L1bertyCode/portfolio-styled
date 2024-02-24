@@ -2,10 +2,10 @@ import "./styles/index.css";
 
 import { MainLayout } from "../shared/layouts/MainLayout";
 import { AppRouter } from "./providers/router";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Footer } from "../widgets/Footer";
 import { Header } from "../widgets/Header";
-import { Page } from "../shared/layouts/Page/Page";
+
 import { Modal } from "../shared/ui/Modal/Modal";
 import { ContactMeForm } from "../feature/contactMeForm";
 import { PageWithLoader } from "../widgets/PageWithLoader";
@@ -17,6 +17,14 @@ function App() {
  const [theme, setTheme] = useState<Theme>(Theme.DARK);
  const [modalIsOpen, setModalIsOpen] =
   useState<boolean>(false);
+ useEffect(() => {
+  if (modalIsOpen) {
+   document.body.style.position = "fixed";
+  }
+  return () => {
+   document.body.style.position = "relative";
+  };
+ }, [modalIsOpen]);
  return (
   <div className={`app ${theme} theme_dark`}>
    <Modal

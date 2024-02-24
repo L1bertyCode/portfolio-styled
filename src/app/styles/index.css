@@ -1,3 +1,38 @@
 @import url("./thems/dark.css");
 @import url("./variables.css");
 @import url("./fonts.css");
+*::-webkit-scrollbar {
+ width: 12px; /* ширина scrollbar */
+ height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+ background: var(
+  --background-color-inverted
+ ); /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+ background-color: var(--accent-color); /* цвет плашки */
+
+ border-radius: 20px; /* закругления плашки */
+ border: 2px solid var(--card-color); /* padding вокруг плашки */
+}
+
+.app *::-webkit-scrollbar {
+ width: 12px; /* ширина scrollbar */
+ height: 8px;
+}
+
+.app *::-webkit-scrollbar-track {
+ background: var(
+  --background-color-inverted
+ ); /* цвет дорожки */
+}
+
+.app *::-webkit-scrollbar-thumb {
+ background-color: var(--accent-color); /* цвет плашки */
+
+ border-radius: 20px; /* закругления плашки */
+ border: 2px solid var(--card-color); /* padding вокруг плашки */
+}
