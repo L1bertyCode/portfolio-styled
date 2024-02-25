@@ -8,7 +8,7 @@
  --indent-40: 40px;
 
  --transition-delay: 0.3s;
-
+ --transition-timing-function: ease-in-out;
  /* color */
  --error-color: #c05353;
  --card-color: #222525;

@@ -8,14 +8,14 @@ import { Title } from "../../shared/ui/Title/Title";
 import { ContactButton } from "../../feature/contactButton/ContactButton";
 import { theme } from "../../app/styles/Theme";
 import Tilt from "react-parallax-tilt";
-import { AppLink } from "../../shared/ui/AppLink/AppLink";
+
 interface BannerProps {
  className?: string;
  setModalIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export const Banner = memo((props: BannerProps) => {
- const { setModalIsOpen, className } = props;
+ const {className } = props;
  return (
   <StyledBanner className={className}>
    <Info>

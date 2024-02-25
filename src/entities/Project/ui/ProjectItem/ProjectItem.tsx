@@ -78,7 +78,6 @@ const StyledProjectItem = styled(Card)<ProjectItemProps>`
   width: 100%;
   height: 388px;
   border-radius: 12px 12px 0 0;
-
   position: relative;
 
   /* background: var(--background-color); */
@@ -92,6 +91,7 @@ const StyledProjectItem = styled(Card)<ProjectItemProps>`
    z-index: 1;
    background: #00000099;
    opacity: 0;
+   transition: var(--transition-delay);
    @media ${theme.media.tablet} {
     opacity: 1;
    }

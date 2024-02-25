@@ -14,10 +14,13 @@ export const MobileNav = memo((props: MobileMenuProps) => {
  };
  return (
   <StyledMobileNav>
-   <BurgerButton
-    isOpen={drawerIsOpen}
-    onClick={onToggleDrawer}
-   />
+   {!drawerIsOpen && (
+    <BurgerButton
+     isOpen={drawerIsOpen}
+     onClick={onToggleDrawer}
+    />
+   )}
+
    <Drawer isOpen={drawerIsOpen} onClick={onToggleDrawer} />
   </StyledMobileNav>
  );

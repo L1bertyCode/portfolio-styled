@@ -41,14 +41,17 @@ const StyledDrawer = styled.nav<DrawerProps>`
  z-index: 11;
  padding: 20px;
  background: var(--card-color);
- display: none;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ transform: translateY(-100%);
+ transition: var(--transition-delay);
  ${(props: DrawerProps) =>
   props.isOpen === true &&
   css<DrawerProps>`
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   transform: translateY(0);
+   transition: var(--transition-delay);
   `}
 `;
 const StyledBurgerButton = styled(BurgerButton)`

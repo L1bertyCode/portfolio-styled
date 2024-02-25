@@ -25,7 +25,8 @@ const StyledButton = styled.button<ButtonProps>`
  border: 1px solid transparent;
  border-radius: var(--b-rad-small);
  cursor: pointer;
- transition: var(--transition-delay);
+ transition: var(--transition-delay)
+  var(--transition-timing-function);
  @media ${theme.media.mobile} {
   padding: var(--indent-8) var(--indent-12);
  }

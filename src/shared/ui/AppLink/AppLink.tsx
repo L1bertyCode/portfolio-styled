@@ -15,12 +15,7 @@ interface AppLinkProps extends LinkProps {
 }
 
 const DefaultAppLink = (props: AppLinkProps) => {
- const {
-  children,
-  to,
-  className,
-  ...otherProps
- } = props;
+ const { children, to, className, ...otherProps } = props;
  const location = useLocation();
  const isActive = location.pathname === to;
 
@@ -82,14 +77,7 @@ export const AppLink = styled(DefaultAppLink)<AppLinkProps>`
       transition: var(--transition-delay);
       &:after {
        transition: var(--transition-delay);
-       position: absolute;
-       content: "";
-       width: 100%;
-       height: 11px;
        background: var(--accent-gradient);
-       bottom: -4px;
-       left: 0;
-       border-radius: var(--b-rad-small);
       }
      }
     `;
