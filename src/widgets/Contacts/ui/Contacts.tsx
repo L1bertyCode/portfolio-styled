@@ -11,7 +11,7 @@ interface ContactsProps {
 export const Contacts = memo((props: ContactsProps) => {
  const { className } = props;
  return (
-  <StyledContacts className={className}>
+  <StyledContacts id={"contact"} className={className}>
    <Title
     className="title"
     title={"Contacts"}

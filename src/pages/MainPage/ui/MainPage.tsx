@@ -6,14 +6,20 @@ import { Skills } from "../../../widgets/Skills";
 import { Contacts } from "../../../widgets/Contacts";
 import { Page } from "../../../shared/layouts/Page/Page";
 import { ScrollTop } from "../../../feature/scrollTop";
+import { Dispatch, SetStateAction } from "react";
 
-type MainPageProps = {};
+type MainPageProps = {
+ setModalIsOpen: Dispatch<SetStateAction<boolean>>;
+};
 
 const MainPage = (props: MainPageProps) => {
  return (
   <StyledPage>
    <ScrollTop />
-   <Banner className="section" />
+   <Banner
+    setModalIsOpen={props.setModalIsOpen}
+    className="section"
+   />
    <AboutMe className="section" />
    <Projects className="section" />
    <Skills className="section" />

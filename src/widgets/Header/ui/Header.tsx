@@ -9,7 +9,6 @@ import { MobileNav } from "./MobileMenu";
 import { ContactButton } from "../../../feature/contactButton/ContactButton";
 
 interface HeaderProps {
- modalIsOpen?: boolean;
  setModalIsOpen: Dispatch<SetStateAction<boolean>>;
  className?: string;
 }

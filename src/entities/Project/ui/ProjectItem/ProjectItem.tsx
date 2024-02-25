@@ -139,12 +139,11 @@ const StyledProjectItem = styled(Card)<ProjectItemProps>`
   width: 100%;
   margin-left: 0;
   display: flex;
-  overflow-x: hidden;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
  }
  .skill {
   padding: 12px 20px;
-  margin-right: 12px;
+  margin: 0 12px 12px 0;
   background: var(--accent-gradient);
   border-radius: var(--b-rad-small);
   color: var(--card-color);

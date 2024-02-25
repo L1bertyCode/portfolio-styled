@@ -16,7 +16,8 @@
  background-color: var(--accent-color); /* цвет плашки */
 
  border-radius: 20px; /* закругления плашки */
- border: 2px solid var(--card-color); /* padding вокруг плашки */
+ /* border: 2px solid var(--card-color);  */
+ /* padding вокруг плашки */
 }
 
 .app *::-webkit-scrollbar {
@@ -34,5 +35,6 @@
  background-color: var(--accent-color); /* цвет плашки */
 
  border-radius: 20px; /* закругления плашки */
- border: 2px solid var(--card-color); /* padding вокруг плашки */
+ /* border: 2px solid var(--card-color);  */
+ /* padding вокруг плашки */
 }

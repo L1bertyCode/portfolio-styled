@@ -1,11 +1,11 @@
-import { memo } from "react";
+import { ReactNode, memo } from "react";
 import styled, { css } from "styled-components";
 import { theme } from "../../../app/styles/Theme";
 
 type TitleTagType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 type TitleColor = "primary" | "accent";
 interface TitleProps {
- title: string;
+ title: string | ReactNode;
  TitleTag: TitleTagType;
  colorType?: TitleColor;
  className?: string;

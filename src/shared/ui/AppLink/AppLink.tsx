@@ -15,7 +15,12 @@ interface AppLinkProps extends LinkProps {
 }
 
 const DefaultAppLink = (props: AppLinkProps) => {
- const { children, to, className, ...otherProps } = props;
+ const {
+  children,
+  to,
+  className,
+  ...otherProps
+ } = props;
  const location = useLocation();
  const isActive = location.pathname === to;
 
@@ -29,14 +34,14 @@ const DefaultAppLink = (props: AppLinkProps) => {
   </Link>
  );
 };
-export const AppLink = styled(DefaultAppLink)`
+export const AppLink = styled(DefaultAppLink)<AppLinkProps>`
  text-decoration: none;
  color: var(--text-color);
  ${(props: AppLinkProps) => {
   switch (props.variant) {
    case "filled":
     return css<AppLinkProps>`
-     padding: 12px 20px;
+     padding: 16px 24px;
      border-radius: var(--b-rad-small);
      border: 1px solid transparent;
      background: var(--accent-gradient);

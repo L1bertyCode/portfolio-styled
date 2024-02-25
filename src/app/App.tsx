@@ -19,10 +19,10 @@ function App() {
   useState<boolean>(false);
  useEffect(() => {
   if (modalIsOpen) {
-   document.body.style.position = "fixed";
+   document.body.style.overflow = "hidden";
   }
   return () => {
-   document.body.style.position = "relative";
+   document.body.style.overflow = "auto";
   };
  }, [modalIsOpen]);
  return (
@@ -34,15 +34,10 @@ function App() {
     <ContactMeForm />
    </Modal>
    <MainLayout
-    header={
-     <Header
-      modalIsOpen={modalIsOpen}
-      setModalIsOpen={setModalIsOpen}
-     />
-    }
+    header={<Header setModalIsOpen={setModalIsOpen} />}
     content={
      <Suspense fallback={<PageWithLoader />}>
-      <AppRouter />
+      <AppRouter setModalIsOpen={setModalIsOpen} />
      </Suspense>
     }
     footer={<Footer />}
