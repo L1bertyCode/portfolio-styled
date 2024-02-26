@@ -7,9 +7,11 @@ type HTMLAppInputProps = Omit<
 >;
 interface InputProps extends HTMLAppInputProps {
  className?: string;
- value?: string;
  error?: string;
  label?: string;
+ type?: string;
+ name?: string;
+ value?: string;
  onChange?: (text: string) => void;
 }
 
@@ -19,6 +21,8 @@ export const Input = memo((props: InputProps) => {
   value,
   error,
   label,
+  type = "text",
+  name,
   onChange,
   ...otherProps
  } = props;
@@ -34,6 +38,8 @@ export const Input = memo((props: InputProps) => {
     value={value}
     onChange={(e) => onChange?.(e.target.value)}
     id={label}
+    type={type}
+    name={name}
     className={`input ${className}`}
    />
    {error && (

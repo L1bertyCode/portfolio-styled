@@ -4,7 +4,7 @@ import {
  ProjectSchema,
 } from "../../../../entities/Project";
 import styled from "styled-components";
-
+import { AnimatePresence } from "framer-motion";
 interface ProjectsListProps {
  className?: string;
  projectList?: ProjectSchema[];
@@ -22,12 +22,17 @@ export const ProjectsList = memo(
    <>
     <StyledProjectsList className={`${className}`}>
      <div className="projectList">
-      {projectList.map((projectListItem, i) => (
-       <ProjectItem
-        key={projectListItem.title + i}
-        project={projectListItem}
-       />
-      ))}
+      <AnimatePresence>
+       {projectList.map((projectListItem, i) => {
+        return (
+         <ProjectItem
+          key={projectListItem.title + i}
+          project={projectListItem}
+          uniqueKey={projectListItem.title + i}
+         />
+        );
+       })}
+      </AnimatePresence>
      </div>
     </StyledProjectsList>
    </>

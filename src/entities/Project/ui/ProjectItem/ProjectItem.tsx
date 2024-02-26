@@ -9,56 +9,66 @@ import stubImg from "../../../../shared/assets/images/stub.webp";
 import { Image } from "../../../../shared/ui/Image/Image";
 import { Card } from "../../../../shared/ui/Card/Card";
 import { theme } from "../../../../app/styles/Theme";
+import { motion } from "framer-motion";
 interface ProjectItemProps {
  className?: string;
  project?: ProjectSchema;
  isLoading?: boolean;
  error?: string;
+ uniqueKey: string;
 }
 
 export const ProjectItem = memo(
  (props: ProjectItemProps) => {
-  const { project, className } = props;
+  const { uniqueKey, project, className } = props;
   if (!project) {
    return null;
   }
   return (
-   <StyledProjectItem className={className}>
-    <div className={"imgBlock"}>
-     <Image
-      className="img"
-      src={project.imgUrl || stubImg}
-      alt={project.title}
-     />
-     <AppLink
-      variant="filled"
-      className={"link"}
-      to={"/projects/" + project.id}
-     >
-      Show poject
-     </AppLink>
-    </div>
-    <div className="content">
-     <Title
-      className="porject_title"
-      title={project.title}
-      TitleTag="h5"
-     />
-     <div className="skillsList">
-      {project?.skills &&
-       project?.skills.map((skill, i) => (
-        <Text
-         key={skill + i}
-         className="skill"
-         text={skill}
-        />
-       ))}
+   <StyledProjectItem {...props} className={className}>
+    <motion.div
+     layout={true}
+     initial={{ opacity: 0 }}
+     animate={{ opacity: 1 }}
+     exit={{ opacity: 0 }}
+     key={uniqueKey}
+    >
+     <div className={"imgBlock"}>
+      <Image
+       className="img"
+       src={project.imgUrl || stubImg}
+       alt={project.title}
+      />
+      <AppLink
+       variant="filled"
+       className={"link"}
+       to={"/projects/" + project.id}
+      >
+       Show poject
+      </AppLink>
      </div>
-     <Text
-      className="descriprion"
-      text={project?.description}
-     />
-    </div>
+     <div className="content">
+      <Title
+       className="porject_title"
+       title={project.title}
+       TitleTag="h5"
+      />
+      <div className="skillsList">
+       {project?.skills &&
+        project?.skills.map((skill, i) => (
+         <Text
+          key={skill + i}
+          className="skill"
+          text={skill}
+         />
+        ))}
+      </div>
+      <Text
+       className="descriprion"
+       text={project?.description}
+      />
+     </div>
+    </motion.div>
    </StyledProjectItem>
   );
  }

@@ -1,5 +1,5 @@
-import { memo } from "react";
-
+import { ElementRef, memo, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Input } from "../../../shared/ui/Input/Input";
 import styled from "styled-components";
 import { Textarea } from "../../../shared/ui/Textarea/Textarea";
@@ -14,17 +14,55 @@ interface ContactMeFormProps {
 export const ContactMeForm = memo(
  (props: ContactMeFormProps) => {
   const { className } = props;
+  const form = useRef<ElementRef<"form">>(null);
+  const sendEmail = (e: any) => {
+   e.preventDefault();
+   if (!form.current) return;
+
+   emailjs
+    .sendForm(
+     "service_vfbzvpj",
+     "template_wmmcwnv",
+     form.current,
+     {
+      publicKey: "M4LfBYovqd-Kq9JUo",
+     }
+    )
+    .then(
+     () => {
+      console.log("SUCCESS!");
+      alert("Submit");
+      e.target.reset();
+     },
+     (error) => {
+      console.log("FAILED...", error.text);
+     }
+    );
+  };
   return (
-   <ContactMeFormStyled className={className}>
-    <StyledField label="Name" />
-    <StyledField label="Email" />
-    <StyledTextarea label="Message" />
+   <ContactMeFormStyled
+    ref={form}
+    onSubmit={sendEmail}
+    className={className}
+   >
+    <StyledField required name={"username"} label="Name" />
+    <StyledField
+     required
+     name={"email"}
+     type="email"
+     label="Email"
+    />
+    <StyledTextarea
+     required
+     name={"message"}
+     label="Message"
+    />
     <StyledButton variant="filled">Submit</StyledButton>
    </ContactMeFormStyled>
   );
  }
 );
-const ContactMeFormStyled = styled.div`
+const ContactMeFormStyled = styled.form`
  display: flex;
  flex-direction: column;
  justify-content: center;

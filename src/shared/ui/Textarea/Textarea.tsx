@@ -6,10 +6,12 @@ interface TextareaProps
  className?: string;
  error?: string;
  label?: string;
+ name?: string;
 }
 
 export const Textarea = memo((props: TextareaProps) => {
- const { error, label, className, ...otherProps } = props;
+ const { name, error, label, className, ...otherProps } =
+  props;
 
  return (
   <StyledTextarea>
@@ -21,8 +23,8 @@ export const Textarea = memo((props: TextareaProps) => {
    <textarea
     {...otherProps}
     className={`${className} textarea`}
-    name=""
-    id=""
+    name={name}
+    id={label}
    ></textarea>
   </StyledTextarea>
  );

@@ -4,7 +4,7 @@ import { Icon } from "../../../../shared/ui/Icon/Icon";
 import { Text } from "../../../../shared/ui/Text/Text";
 import styled from "styled-components";
 import { theme } from "../../../../app/styles/Theme";
-
+import { Fade } from "react-awesome-reveal";
 interface SkillItemProps {
  skill?: SkillItemSchema;
  className?: string;
@@ -17,8 +17,10 @@ export const SkillItem = memo((props: SkillItemProps) => {
  }
  return (
   <StyledSkillItem className={className}>
-   <Icon iconId={skill.iconId} viewBox={skill?.viewBox} />
-   <Text text={skill.text.toUpperCase()} />
+   <Fade cascade={true} damping={0.2}>
+    <Icon iconId={skill.iconId} viewBox={skill?.viewBox} />
+    <Text text={skill.text.toUpperCase()} />
+   </Fade>
   </StyledSkillItem>
  );
 });
